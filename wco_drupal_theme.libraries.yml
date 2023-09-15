@@ -1,0 +1,6 @@
+base:
+  version: VERSION
+  css:
+    base:
+      css/wco.css: {}
+      vendor/fonts/lobster.css: {}

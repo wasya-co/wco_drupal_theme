@@ -1,0 +1,7 @@
+name: wco_drupal_theme
+type: theme
+description: wco_drupal_theme
+core_version_requirement: ^8 || ^9
+base theme: ish_drupal_theme
+libraries:
+  - wco_drupal_theme/base
