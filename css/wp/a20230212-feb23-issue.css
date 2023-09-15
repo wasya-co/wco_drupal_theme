@@ -15,6 +15,7 @@ article#a20230212feb23issue, article#a2023q3issue {
   background-repeat: no-repeat;
   background-attachment: fixed;
   /* #p5 */
+  width: 100%;
 }
 article#a20230212feb23issue section .header, article#a2023q3issue section .header {
   text-align: center;

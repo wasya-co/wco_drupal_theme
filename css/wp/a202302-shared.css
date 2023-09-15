@@ -29,16 +29,8 @@ html, body {
 .center {
   text-align: center;
 }
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
 .flex-row {
   display: flex;
-}
-.max-width {
-  max-width: 1000px;
-  margin: auto;
 }
 .spacer {
   display: flex;
