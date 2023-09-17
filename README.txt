@@ -28,14 +28,9 @@ better tags (categories), pages
 /contact-us/project-intake
 /culture-2
 
-/design-services
+
 /dev-all-stacks
-/dev-js
-/dev-react -> /services/reactjs-development
-/dev-ror   -> /services/ruby-on-rails-web-application-development
 /dev-capacitor
-/dev-php
-/dev-wp
 
 /issues
 /issues/2023q3-issue
@@ -53,6 +48,7 @@ better tags (categories), pages
 /services/59-custom-logo-design.html
 /services/60-illustration.html
 /services/64-3d-object-design.html
+
 /solutions
 /solutions/asset-management
 
