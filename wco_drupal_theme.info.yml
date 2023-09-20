@@ -5,3 +5,20 @@ core_version_requirement: ^8 || ^9
 base theme: ish_drupal_theme
 libraries:
   - wco_drupal_theme/base
+
+regions:
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  filters: 'Filters'
+  footer: 'Footer'
+  header: 'Header'
+  help: 'Help'
+  highlighted: 'Highlighted'
+  page_bottom: 'Page bottom'
+  page_top: 'Page top'
+  postfooter: 'Postfooter'
+  preheader: 'Preheader'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  sidebar_first: 'Left Sidebar'
+  sidebar_second: 'Right Sidebar'
