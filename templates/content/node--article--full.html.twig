@@ -1,8 +1,12 @@
 
+
+
+
 <div class='maxwidth'>
 
   {%
     set classes = [
+      'wco-id-' ~ node.id,
       'node',
       'node--type-' ~ node.bundle|clean_class,
       node.isPromoted() ? 'node--promoted',
@@ -26,7 +30,7 @@
       <footer class="node__meta">
         {{ author_picture }}
         <div{{ author_attributes.addClass('node__submitted') }}>
-          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+          By {{ author_name }} on {{ node.created.value|date('Y-m-d') }}
           {{ metadata }}
         </div>
       </footer>

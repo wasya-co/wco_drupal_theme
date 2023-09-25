@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# set -e ## error
+set -x
+
+git add .
+git commit -m 'autocommit'
+git push
+
+ssh do2 "cd /mnt/volume_sfo2_01/projects/docker/volumes/wco_drupal_production_data/web/themes/wco_drupal_theme ; git pull && echo ok"
+
+
+set +e
+set +x
+echo ok
+
