@@ -2,7 +2,7 @@ base:
   version: VERSION
   css:
     base:
-      css/wp/variables.css:
+      scss/variables.css:
         weight: -10
       css/wp/a202302-shared.css: {}
       css/wp/a202302-wco-card.css: {}
@@ -12,4 +12,5 @@ base:
       css/wp/a20230211-our-process-2.css: {}
       css/wp/site.css: {}
       css/wco.css: {}
+      css/regions.css: {}
       vendor/fonts/lobster.css: {}

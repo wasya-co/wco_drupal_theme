@@ -45,10 +45,29 @@ header.header-v0-0-0 {
     position: relative;
     z-index: 1; }
     header.header-v0-0-0 .r1 .r1C {
-      background: white;
+      background: var(--wco-dol-bg-color);
       height: 40px;
       border-radius: 20px 20px 0 0; }
       header.header-v0-0-0 .r1 .r1C .row {
         margin-top: 2em; }
       header.header-v0-0-0 .r1 .r1C .Card {
         height: 100%; }
+
+/* S */
+.region-footer .block.block-language {
+  border: 0; }
+
+.region-footer .block.search-block-form {
+  border: 0;
+  display: flex;
+  justify-content: flex-end; }
+
+ul.social-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; }
+  ul.social-links li a {
+    padding-left: 0.8em; }
+    ul.social-links li a span {
+      display: none; }

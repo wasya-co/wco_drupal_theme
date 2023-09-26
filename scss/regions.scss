@@ -1,0 +1,32 @@
+
+
+.region-headerW {
+  border-bottom: 2px solid orange;
+}
+
+.region-footer {
+
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #f6ebda;
+
+  // background-image: url('//d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/09/26220751/1800x350-futuciti-1-tiny.png');
+  /* lighter */
+  background-image: url('http://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/09/26221214/1800x350-futuciti-1-lighter-tiny.png');
+
+}
+
+.layout-postfooter {
+  // background-color: #f6ebda;
+  // background-color: #d0c0a7; /* a big darker */
+  background-color: #908e8a; /* gray */
+  background-color: #bab4ab; /* lighter gray */
+}
+
+// #block-wco-drupal-theme-content {
+html,
+.layout-content {
+  background-color: #f6ebda;
+}
+

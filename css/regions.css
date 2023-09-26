@@ -1,0 +1,20 @@
+.region-headerW {
+  border-bottom: 2px solid orange; }
+
+.region-footer {
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #f6ebda;
+  /* lighter */
+  background-image: url("http://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/09/26221214/1800x350-futuciti-1-lighter-tiny.png"); }
+
+.layout-postfooter {
+  background-color: #908e8a;
+  /* gray */
+  background-color: #bab4ab;
+  /* lighter gray */ }
+
+html,
+.layout-content {
+  background-color: #f6ebda; }
