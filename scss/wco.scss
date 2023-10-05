@@ -100,6 +100,32 @@ header.header-v0-0-0 {
 
 }
 
+/* R */
+.block-views-blockruby-on-rails-articles-block-1 {
+  // border: 1px solid green;
+
+  padding: 1em;
+
+  .view-ruby-on-rails-articles {
+    // border: 1px solid red;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .view-content {
+      // border: 1px solid blue;
+
+      display: flex;
+      flex-direction: column;
+
+      .views-field-title {
+        margin-left: 2em;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
 
 /* S */
 

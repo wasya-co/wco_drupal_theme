@@ -53,6 +53,20 @@ header.header-v0-0-0 {
       header.header-v0-0-0 .r1 .r1C .Card {
         height: 100%; }
 
+/* R */
+.block-views-blockruby-on-rails-articles-block-1 {
+  padding: 1em; }
+  .block-views-blockruby-on-rails-articles-block-1 .view-ruby-on-rails-articles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .block-views-blockruby-on-rails-articles-block-1 .view-ruby-on-rails-articles .view-content {
+      display: flex;
+      flex-direction: column; }
+      .block-views-blockruby-on-rails-articles-block-1 .view-ruby-on-rails-articles .view-content .views-field-title {
+        margin-left: 2em;
+        margin-bottom: 1em; }
+
 /* S */
 .region-footer .block.block-language {
   border: 0; }
