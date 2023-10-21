@@ -1,5 +1,23 @@
 
-<article id="a2023q3issue" class='' >
+<article{{ attributes.addClass(classes) }} id="a2023q3issue" >
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer class="node__meta">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
 
   <section id='p1' class='hero' >
     <h1 class='lobster'>Innovative solutions for your digital success</h1>
@@ -264,6 +282,13 @@
     </div>
   </section>
   <div class='divider'></div>
+
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content }}
+  </div>
+
+  <div class="clearfix"></div>
 
 </article>
 
