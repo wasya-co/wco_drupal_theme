@@ -1,0 +1,33 @@
+
+
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    <style>
+      .a202311-awards-and-recognitions h2 {
+        margin-bottom: 1em;
+      }
+      .a202311-awards-and-recognitions img {
+        margin: 0 .2em 0.2em 0;
+      }
+    </style>
+    <div class="a202311-awards-and-recognitions">
+      <h2>Awards & Recognitions</h2>
+      <div class='items'>
+        <img src="http://ish-drupal-prod.s3.amazonaws.com/public/inline-images/253x100%20PVD%20RI%20go%20global%20awards.jpg?VersionId=W1WtrhrVJOhTAhI4BgER7SleGPHK3rK_" alt='266x100 PVD international trade council'>
+        <img src="http://ish-drupal-prod.s3.amazonaws.com/public/inline-images/266x100%20PVD%20international%20trade%20council_0.png?VersionId=mUCDTldqG9u7qr.a15Q.cyJxwv0qPHKj" alt='253x100 PVD RI go global awards'>
+      </div>
+    </div>
+  {% endblock %}
+</div>
