@@ -13,6 +13,7 @@
     <head-placeholder token="{{ placeholder_token }}">
     <title>{{ placeholder_token }} {{ head_title|safe_join(' | ') }}</title>
 
+    <css-placeholder token="{{ placeholder_token }}">
     <noscript><css-placeholder token="{{ placeholder_token }}"></noscript>
 
     <js-placeholder token="{{ placeholder_token }}">
@@ -67,10 +68,9 @@
     <js-bottom-placeholder token="{{ placeholder_token }}">
 
 
-    <div id='CssPlaceholders'  >
+    {# <div id='CssPlaceholders'  >
       <css-placeholder token="{{ placeholder_token }}">
     </div>
-
     <script type='text/javascript'>
       console.log('^');
       var head = document.getElementsByTagName('head')[0];
@@ -85,10 +85,9 @@
         link.href = divs[i].href;
         link.media = 'all';
         head.appendChild(link);
-
         console.log('.');
       }
-    </script>
+    </script> #}
 
 
   </body>
