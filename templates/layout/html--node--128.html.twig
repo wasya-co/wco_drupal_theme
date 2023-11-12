@@ -1,4 +1,8 @@
 
+{#
+  /issues/2024q1-issue
+#}
+
 {%
   set body_classes = [
     logged_in ? 'user-logged-in',
@@ -14,10 +18,21 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
 
     <css-placeholder token="{{ placeholder_token }}">
-    <noscript><css-placeholder token="{{ placeholder_token }}"></noscript>
-
+    {# <noscript><css-placeholder token="{{ placeholder_token }}"></noscript> #}
     <js-placeholder token="{{ placeholder_token }}">
 
+
+    <link rel="preload" href="/libraries/superfish/css/superfish.css?s41483" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/libraries/superfish/css/superfish.css?s41483"></noscript>
+
+    <link rel="preload" href="/themes/ish_drupal_theme/vendor/css/bootstrap%404.5.2.min.css?s41483" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/themes/ish_drupal_theme/vendor/css/bootstrap%404.5.2.min.css?s41483"></noscript>
+
+    <link rel="preload" href="/themes/ish_drupal_theme/css/index-2024q1-issue.css?s41483" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/themes/ish_drupal_theme/css/index-2024q1-issue.css?s41483"></noscript>
+
+    <link rel="preload" href="/themes/wco_drupal_theme/css/index-2024q1-issue.css?s41483" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/themes/wco_drupal_theme/css/index-2024q1-issue.css?s41483"></noscript>
 
     <!--Matomo-->
     <script>

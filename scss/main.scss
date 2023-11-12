@@ -1,4 +1,71 @@
 
+
+a {
+  color: var(--global--color-primary);
+  text-decoration: none;
+
+}
+.region-footer a {
+  background: var(--wco-dol-bg-color);
+  padding: 2px;
+}
+a:hover {
+  color: var(--global--color-primary-hover);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+a:focus {
+  color: var(--global--color-secondary);
+}
+a:active {
+  color: var(--global--color-primary);
+}
+
+
+.region-headerW {
+  border-bottom: 2px solid orange;
+}
+
+.region-footer {
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #f6ebda;
+  background-image: url('//d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/09/26221214/1800x350-futuciti-1-lighter-tiny.png');
+  background-attachment: fixed;
+  background-size: 1800px;
+
+  .block.block-language {
+    border: 0;
+  }
+
+  .search-block-form {
+    margin: 1em 0;
+  }
+  #search-block-form {
+    // border: 2px solid red;
+    border: 0;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+}
+.layout-postfooter {
+  // background-color: #f6ebda;
+  // background-color: #d0c0a7; /* a big darker */
+  background-color: #908e8a; /* gray */
+  background-color: #bab4ab; /* lighter gray */
+}
+
+// #block-wco-drupal-theme-content {
+html,
+.layout-content {
+  background-color: #f6ebda;
+}
+
+
 /* Fields */
 /* title */
 .page-title {
@@ -19,11 +86,6 @@ article.node--view-mode-full-mini {
 }
 
 /* L */
-
-.layout-container {
-  // background-color: #f6ebda;
-
-}
 
 .lobster {
   font-family: 'Lobster', cursive;
@@ -121,6 +183,20 @@ header.header-v0-0-0 {
 
 }
 
+/* N */
+
+.navigation,
+.links {
+  color: var(--global--color-primary);
+
+  .svg-icon {
+    display: inline-block;
+    fill: currentColor;
+    vertical-align: middle;
+    position: relative;
+  }
+}
+
 /* R */
 .block-views-blockruby-on-rails-articles-block-1 {
   // border: 1px solid green;
@@ -150,19 +226,10 @@ header.header-v0-0-0 {
 
 /* S */
 
-.region-footer {
-
-  .block.block-language {
-    border: 0;
-  }
-
-  .block.search-block-form {
-    border: 0;
-
-    display: flex;
-    justify-content: flex-end;
-  }
-
+.site-slogan {
+  text-align: center;
+  margin-top: -1.1em;
+  margin-bottom: 1em;
 }
 
 ul.social-links {
