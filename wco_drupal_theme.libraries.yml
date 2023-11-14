@@ -11,6 +11,5 @@ base:
       css/wp/a20230212-feb23-issue.css: {}
       css/wp/a20230211-our-process-2.css: {}
       css/wp/site.css: {}
-      css/wco.css: {}
-      css/regions.css: {}
+      css/main.css: {}
       vendor/fonts/lobster.css: {}

@@ -17,10 +17,15 @@
     <head-placeholder token="{{ placeholder_token }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
 
-    {# <css-placeholder token="{{ placeholder_token }}"> #}
+    <css-placeholder token="{{ placeholder_token }}">
     {# <noscript><css-placeholder token="{{ placeholder_token }}"></noscript> #}
     <js-placeholder token="{{ placeholder_token }}">
 
+    <link rel="preload" href="/themes/ish_drupal_theme/css/index-stable9.css?s41483" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/themes/ish_drupal_theme/css/index-stable9.css?s41483"></noscript>
+
+    <link rel="preload" href="/themes/ish_drupal_theme/css/index-claro.css?s41483" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/themes/ish_drupal_theme/css/index-claro.css?s41483"></noscript>
 
     <link rel="preload" href="/libraries/superfish/css/superfish.css?s41483" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/libraries/superfish/css/superfish.css?s41483"></noscript>
