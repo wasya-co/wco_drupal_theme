@@ -31,7 +31,7 @@ section.our-stack-2-frontend,
   border-top: 1px solid var(--wco-202302-color1);
   min-height: 75vh;
 
-  .max-width {
+  .maxwidth {
     min-height: 75vh;
     display: flex;
     flex-direction: column;
@@ -375,20 +375,7 @@ section.our-services-ip-md {
 
 }
 
-section.our-stack-2-frontend {
-  a {
-    color: var(--wco-202302-color1);
-  }
-  .header {
-    margin-bottom: 5em;
-  }
-  .sm {
-    color: #999;
-    font-size: 0.8em;
-    margin-top: -0.5em;
-    font-style: italic;
-  }
-}
+
 
 
 section.about-us {
@@ -564,14 +551,17 @@ section.our-services-pg1 {
 }
 
 section.our-process {
+  border-top: 1px solid #00a3cc;
+
+  color: #eee;
+
+  a.sub {
+    color: var(--wco-dol-link-color);
+  }
+
   margin: 0;
   padding: 4em 0;
   background: #eee;
-
-  .max-width {
-    display: flex;
-    justify-content: center;
-  }
 
   .header {
     margin-bottom: 0;
@@ -598,6 +588,17 @@ section.our-process {
   }
 
 }
+@media screen and (min-width: 768px) { /* desktop */
+  section.our-process {
+    background: linear-gradient( #000, #333 30%, #333 70%, #ddd 75% );
+  }
+}
+@media screen and (max-width: 768px) { /* tablet */
+  section.our-process {
+    background: linear-gradient( #ddd, #ddd 40%, #555 42% );
+  }
+}
+
 
 section.our-clients {
   padding: 10em 0 10em 0;
@@ -702,11 +703,6 @@ section.hero {
   }
 }
 
-body.page-our-process-2 {
-  section.contact-us-2-md {
-    background: linear-gradient(var(--wco-color4), var(--wco-color5) 90% );
-  }
-}
 section.contact-us-2-md {
   background: linear-gradient( var(--wco-lod-text-color), var(--wco-dol-bg-color) );
   // background-color: linear-gradient(var(--wco-color4), var(--wco-dol-bg-color) 90% );

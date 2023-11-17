@@ -1,7 +1,7 @@
 
 
 
-@media screen and (max-width: 768px) { /* cellphones */
+@media screen and (max-width: 768px) { /* tablet */
   .element {
     /* Apply some styles */
   }

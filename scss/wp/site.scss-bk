@@ -1124,36 +1124,6 @@ header.page-header {
   background: white;
 }
 
-.Card,
-.pagination,
-.comments-pagination {
-  box-shadow: 1px 1px 3px 0px var(--wco-light-text-color);
-  background: var(--wco-light-bg-color);
-  padding: 1em;
-  position: relative;
-  border-radius: var(--wco-border-radius) 0;
-}
-@media only screen and (max-width: 822px) {
-  .archive_php {
-    > .W0 {
-      flex-direction: column-reverse;
-      padding: 1em 0 0 0;
-      background: var(--wco-light-bg-color);
-
-      .archive-description {
-        padding: 0 0.5em;
-      }
-    }
-  }
-
-  .Card {
-    box-shadow: none;
-  }
-
-  .archive_php .Card {
-    box-shadow: 1px 1px 3px 0px var(--wco-light-text-color);
-  }
-}
 .pagination,
 .comments-pagination {
   // border-top-left-radius: 0;

@@ -2,14 +2,14 @@ base:
   version: VERSION
   css:
     base:
-      scss/variables.css:
-        weight: -10
-      css/wp/a202302-shared.css: {}
-      css/wp/a202302-wco-card.css: {}
-      css/wp/a202302-circular.css: {}
-      css/wp/a20230212-our-services-2.css: {}
-      css/wp/a20230212-feb23-issue.css: {}
-      css/wp/a20230211-our-process-2.css: {}
-      css/wp/site.css: {}
-      css/main.css: {}
+      # scss/variables.css:
+      #   weight: -10
+      # css/wp/a202302-shared.css: {}
+      # css/wp/a202302-wco-card.css: {}
+      # css/wp/a202302-circular.css: {}
+      # css/wp/a20230212-our-services-2.css: {}
+      # css/wp/a20230212-feb23-issue.css: {}
+      # css/wp/a20230211-our-process-2.css: {}
+      # css/wp/site.css: {}
+      css/index.css: {}
       vendor/fonts/lobster.css: {}
