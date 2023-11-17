@@ -162,17 +162,6 @@ figcaption,
   padding: 0;
 }
 
-a {
-  cursor: pointer;
-  color: var(--wp--style--color--link, var(--global--color-primary));
-  text-underline-offset: 3px;
-  text-decoration-skip-ink: all;
-}
-
-a:hover {
-  text-decoration-style: dotted;
-  text-decoration-skip-ink: none;
-}
 
 * > figure > video {
   max-width: unset;

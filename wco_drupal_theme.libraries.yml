@@ -11,5 +11,6 @@ base:
       # css/wp/a20230212-feb23-issue.css: {}
       # css/wp/a20230211-our-process-2.css: {}
       # css/wp/site.css: {}
-      css/index.css: {}
+      css/index.css:
+        weight: 10
       vendor/fonts/lobster.css: {}
