@@ -25,7 +25,7 @@
   <div class='divider'></div>
 
   <section id='p2' class='about-us' >
-    <div class='max-width'>
+    <div class='maxwidth'>
       <div class='header'>
         <h2 class='title'>WasyaCo</h2>
         <h3 class='subtitle'>- Est. 2013 -</h3>
@@ -44,7 +44,7 @@
 
 
   <section id='p4' class='our-services-pg1 flex-column' >
-    <div class='max-width maxwidth'>
+    <div class='maxwidth maxwidth'>
       <div class='header'>
         <h2 class='title'>Our Technology Services</h2>
         <div class='subtitle'>
@@ -53,7 +53,7 @@
       </div>
       <div class='fancy-border'></div>
 
-      <div class='rows'>
+      <div class='container'>
         <div class='row'>
           <div class='col-md-6'>
 
@@ -101,43 +101,14 @@
           </div>
         </div><!--row-->
       </div><!--container-->
-    </div><!--max-width-->
+    </div><!--maxwidth-->
   </section>
   <div class='divider'></div>
 
-  <section id='p5' class='our-process' >
-    <div class='row max-width'>
-
-      <div class='my-col col-sm-12 col-md-4 order-md-2'>
-        <img class='illustration' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/04/26164122/256x256-robotic-arm-rm-tiny.png" />
-      </div>
-      <div class='col-sm-12 col-md-8 order-md-1'>
-        <div class='my-col'>
-          <div class='header'>
-            <h2 class='title' >Our Process</h2>
-          </div>
-          <div class='fancy-border'></div>
-
-          <div class='description'>
-            <p>We work in iterative development cycles segmented in 1-week sprints. We hold daily standups, and monthly planning meetings.</p>
-            <p>We use Redmine as the ticketing system, along with a number of other productivity tools.</p>
-          </div>
-
-          <div class='flex-col'>
-            <a href="/our-process-2"><button class="button-91" role="button">Tour our Workshop</button></a>
-            <a class='sub' href="/our-process-2">Read about Our Process</a>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-  </section>
-  <div class='divider'></div>
 
 
 <section class='our-stack-2-frontend' >
-  <div class='max-width'>
+  <div class='maxwidth'>
     <div class='header'>
       <h2 class='title'>Frontend Technologies</h2>
       <div class='fancy-border'></div>
@@ -189,7 +160,7 @@
 
 
   <section id='p6' class='our-clients' >
-    <div class='max-width'>
+    <div class='maxwidth'>
       <div class='header'>
         <h2 class='title' style='color: #aaa;' ><span class='a'>Trusted by </span><span class='a'>Partners Worldwide</span></h2>
       </div>
@@ -225,11 +196,11 @@
           </div>
         </div>
       </div>
-    </div><!--max-width-->
+    </div><!--maxwidth-->
   </section>
 
   <section id='p7' class='testimonials' >
-    <div class='max-width'>
+    <div class='maxwidth'>
       <div class='header'>
         <h2 class='title' style='color: #aaa;' >What People are Saying</h2>
       </div>
@@ -272,7 +243,7 @@
   <div class='divider'></div>
 
   <section class='contact-us-2-md' >
-    <div class='max-width'>
+    <div class='maxwidth'>
       <div class='description'>
         <p class='sm' >Ready to make a move? <br />Chat with us about your project:</p>
         <!-- <a href="/w/c2"><button class="button-91" role="button">Schedule a call</button></a> -->

@@ -1,0 +1,50 @@
+
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+
+    <section id='p5' class='our-process' >
+      <div class='row maxwidth'>
+
+        <div class='my-col col-sm-12 col-md-4 order-md-2'>
+          <img class='illustration' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/04/26164122/256x256-robotic-arm-rm-tiny.png" />
+        </div>
+        <div class='col-sm-12 col-md-8 order-md-1'>
+          <div class='my-col'>
+            <div class='header'>
+              <h2 class='title' >Our Process</h2>
+            </div>
+            <div class='fancy-border'></div>
+
+            <div class='description'>
+              <p>We work in iterative development cycles segmented in 1-week sprints. We hold daily standups, and monthly planning meetings.</p>
+              <p>We use Redmine as the ticketing system, along with a number of other productivity tools.</p>
+            </div>
+
+            <div class='flex-col'>
+              <a href="/our-process-2"><button class="button-91" role="button">Tour our Workshop</button></a>
+              {# <a class='sub' href="/our-process-2">Read about Our Process</a> #}
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+    <div class='divider'></div>
+
+
+  {% endblock %}
+</div>
+
