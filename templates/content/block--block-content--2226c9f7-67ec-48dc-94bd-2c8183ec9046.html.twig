@@ -1,13 +1,33 @@
 {#
-  2023Q4 contact us
+  2023Q4 contact us 0.0.0 rotary phone
 #}
-<section class="contact-us-2-md">
-  <div class="maxwidth">
-    <div class="description">
-      <p class="sm">Ready to make a move? <br>Chat with us about your project:</p>
-      <!-- <a href="/w/c2"><button class="button-91" role="button">Schedule a call</button></a> -->
-      <a href="/contact-us-4"><button class="button-91" role="button">Contact Us</button></a>
-    </div>
-    <div class="illustration"></div>
-  </div>
-</section>
+
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+
+    <section class="contact-us-2-md">
+      <div class="maxwidth">
+        <div class="description">
+          <p class="sm">Ready to make a move? <br>Chat with us about your project:</p>
+          <!-- <a href="/w/c2"><button class="button-91" role="button">Schedule a call</button></a> -->
+          <a href="/contact-us-4"><button class="button-91" role="button">Contact Us</button></a>
+        </div>
+        <div class="illustration"></div>
+      </div>
+    </section>
+
+  {% endblock %}
+</div>
+

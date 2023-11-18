@@ -1,5 +1,7 @@
 {#
   2023-11-17 _vp_ unused
+  2023-11-18 _vp_ changing from a span to a nice header, for Page Title!
+  2023-11-18 _vp_ unused b/c this is inside an Article Card... gotta be a span.
 #}
 {#
 /**
@@ -39,9 +41,9 @@
     'field--label-' ~ label_display,
   ]
 %}
-<span{{ attributes.addClass(classes) }}>
+<h1{{ attributes.addClass(classes) }}>
   {%- for item in items -%}
     {{ item.content }}
   {%- endfor -%}
-</span>
+</h1>
 {% endif %}

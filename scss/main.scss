@@ -105,6 +105,12 @@ html,
 }
 
 /* C */
+/* captcha */
+.captcha__element > .reload-captcha-wrapper {
+  display: none;
+}
+
+
 .Card3dlike {
   border: 1px solid black;
   border-radius: 10px;
@@ -167,6 +173,15 @@ article.node--view-mode-full-mini {
     border-top: 3px dashed gray;
   }
 }
+
+/* E */
+/* errors */
+body:not(.user-logged-in) {
+  .messages--error {
+    display: none;
+  }
+}
+
 
 /* L */
 
@@ -327,5 +342,17 @@ h2.wco-border-bottom {
   }
   .description {
     margin-right: 0;
+  }
+}
+
+/* W *
+/* webform */
+.block-webform-block {
+  input {
+    max-width: 95vw;
+  }
+  .form-item {
+    max-width: 95vw;
+    margin: auto;
   }
 }

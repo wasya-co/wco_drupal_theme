@@ -1,33 +1,34 @@
+{#
+  2023-11-18 _vp_ Unused now b/c I can just configure Drupal without this template.
+  2023-11-18 _vp_ Nah, let me use this still.
+#}
 
-<div class="col-md-4" >
+{%
+  set classes = [
+    'Card',
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('ish_drupal_theme/node') }}
+<article{{ attributes.addClass(classes) }}>
 
-  {%
-    set classes = [
-      'Card',
-      'node',
-      'node--type-' ~ node.bundle|clean_class,
-      node.isPromoted() ? 'node--promoted',
-      node.isSticky() ? 'node--sticky',
-      not node.isPublished() ? 'node--unpublished',
-      view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-    ]
-  %}
-  {{ attach_library('ish_drupal_theme/node') }}
-  <article{{ attributes.addClass(classes) }}>
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content }}
+  </div>
 
-    <div{{ content_attributes.addClass('node__content') }}>
-      {{ content }}
+  {# {{ title_prefix }}
+  {% if label and not page %}
+    <div{{ title_attributes.addClass( 'text-center' ) }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
     </div>
+  {% endif %}
+  {{ title_suffix }} #}
 
-    {{ title_prefix }}
-    {% if label and not page %}
-      <div{{ title_attributes.addClass( 'text-center' ) }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </div>
-    {% endif %}
-    {{ title_suffix }}
+  <div class="clearfix"></div>
 
-    <div class="clearfix"></div>
-
-  </article>
-</div>
+</article>
