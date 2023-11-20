@@ -337,9 +337,10 @@ h2.wco-border-bottom {
   }
 
   img {
-    width: 160px;
+    // width: 160px;
     margin-bottom: 1em;
   }
+
   .description {
     margin-right: 0;
   }
@@ -354,5 +355,60 @@ h2.wco-border-bottom {
   .form-item {
     max-width: 95vw;
     margin: auto;
+  }
+}
+.a20231120-our-corporate-culture {
+  img {
+    max-width: 100%;
+  }
+
+  .pW {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .row {
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 1em;
+  }
+
+}
+.block-views-blockissue-2024q1-newsfeed-block-1 {
+  border-top: 1px solid var(--wco-202302-color1);
+  padding-top: 2em;
+  margin-bottom: 3em;
+
+  footer {
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  > h2 {
+    font-family: lobster, cursive;
+    font-size: 32px;
+  }
+}
+
+.block-block-content3069bbe0-287b-4d88-8759-21105635cf2c {
+  margin-bottom: 200px;
+  text-align: center;
+
+  color: #666;
+
+  h2 {
+    font-family: 'lobster', cursive;
+    transform: skew(-12deg) rotate(-14deg);
+
+  }
+  h2:after {
+    content: "Est. 2013";
+    font-family: sans-serif;
+    display: block;
+    font-size: 0.6em;
+
+
   }
 }

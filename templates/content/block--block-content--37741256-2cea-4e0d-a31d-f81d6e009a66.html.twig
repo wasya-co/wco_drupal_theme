@@ -1,6 +1,16 @@
 {#
   2023Q4 what people are saying
 #}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+
+
+
 <section id="p7" class="testimonials">
     <div class="maxwidth">
       <div class="header">
@@ -42,3 +52,7 @@
 
     </div>
   </section>
+
+
+  {% endblock %}
+</div>
