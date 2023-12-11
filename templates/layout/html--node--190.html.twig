@@ -1,0 +1,18 @@
+
+{#
+  templates/footer
+#}
+
+{% if page.footer %}
+  <footer role="contentinfo">
+      {{ page.footer }}
+  </footer>
+{% endif %}
+
+{% if page.postfooter %}
+  <footer role="contentinfo" class="layout-postfooter" >
+    <div class='maxwidth'>
+      {{ page.postfooter }}
+    </div>
+  </footer>
+{% endif %}
