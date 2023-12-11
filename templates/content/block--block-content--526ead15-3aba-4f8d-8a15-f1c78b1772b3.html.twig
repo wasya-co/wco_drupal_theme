@@ -1,6 +1,13 @@
 {#
   social links, social menu
 #}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
 
 <ul class="menu social-links">
   <li class="menu-item linkedin">
@@ -16,3 +23,6 @@
     </a>
   </li>
 </ul>
+
+  {% endblock %}
+</div>

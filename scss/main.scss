@@ -1,4 +1,5 @@
 
+@import "consulting-pricing.scss";
 
 .layout--onecol {
   width: 100%;
@@ -182,6 +183,13 @@ body:not(.user-logged-in) {
   }
 }
 
+/* H */
+.Hero {
+  height: 400px;
+  background-position: center center;
+  background-size: fit;
+  background-repeat: no-repeat;
+}
 
 /* L */
 
@@ -345,6 +353,9 @@ h2.wco-border-bottom {
     margin-right: 0;
   }
 }
+
+/* T */
+
 
 /* W */
 

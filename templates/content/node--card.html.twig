@@ -1,11 +1,13 @@
 {#
-  2023-11-18 _vp_ Unused now b/c I can just configure Drupal without this template.
-  2023-11-18 _vp_ Nah, let me use this still.
+  2023-11-18 :: Unused now b/c I can just configure Drupal without this template.
+  2023-11-18 :: Nah, let me use this still.
+  2023-12-10 :: moved from product-card-block to node--card.html.twig
 #}
 
 {%
   set classes = [
     'Card',
+
     'node',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
