@@ -1,10 +1,10 @@
 
 {%
   set body_classes = [
-    logged_in ? 'user-logged-in',
+    logged_in     ? 'user-logged-in',
     not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
-    node_type ? 'page-node-type-' ~ node_type|clean_class,
-    db_offline ? 'db-offline',
+    node_type     ? 'page-node-type-' ~ node_type|clean_class,
+    db_offline    ? 'db-offline',
   ]
 %}
 <!DOCTYPE html>
@@ -13,10 +13,17 @@
     <head-placeholder token="{{ placeholder_token }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
 
-    <link rel="preload" href="/themes/ish_drupal_theme/vendor/css/bootstrap%404.5.2.min.css?s41483" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    {# Fonts #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&display=swap" rel="stylesheet">
+
+
+              <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+                                     href="/themes/ish_drupal_theme/vendor/css/bootstrap%404.5.2.min.css?s41483" >
     <noscript><link rel="stylesheet" href="/themes/ish_drupal_theme/vendor/css/bootstrap%404.5.2.min.css?s41483"></noscript>
 
-    <css-placeholder token="{{ placeholder_token }}">
+              <css-placeholder token="{{ placeholder_token }}">
     <noscript><css-placeholder token="{{ placeholder_token }}"></noscript>
 
     <js-placeholder token="{{ placeholder_token }}">

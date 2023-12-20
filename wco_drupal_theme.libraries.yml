@@ -13,4 +13,4 @@ base:
       # css/wp/site.css: {}
       css/index.css:
         weight: 10
-      vendor/fonts/lobster.css: {}
+      # vendor/fonts/lobster.css: {}
