@@ -107,7 +107,8 @@ a:active {
 // #block-wco-drupal-theme-content {
 html,
 .layout-content {
-  background-color: #f6ebda;
+  // background-color: #f6ebda;
+  background-color: #dad4d8;
 }
 
 /* C */
@@ -402,7 +403,7 @@ h2.wco-border-bottom {
   h2 {
     font-family: 'lobster', cursive;
     transform: skew(-12deg) rotate(-14deg);
-
+    text-shadow: -2px 2px white;
   }
   h2:after {
     content: "Est. 2013";
