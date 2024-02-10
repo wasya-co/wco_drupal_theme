@@ -1,1 +1,97 @@
-@media only screen and (min-width: 852px){section.our-stack-2-frontend .header{margin-bottom:5em}section.our-stack-2-frontend .sm{color:#999;font-size:0.8em;margin-top:-0.5em;font-style:italic}#circular{margin-bottom:4em;--r: 250px;width:calc( var(--r) * 2);height:calc( var(--r) * 2);position:relative}#circular .el{width:10px;height:10px;position:absolute}#circular .icon{background-size:cover;width:100px;height:100px;position:absolute;top:-50px;left:-50px}#circular .my-label{position:absolute;width:500px;height:30px;line-height:30px;top:-15px;left:50px;padding-left:10px}#circular .center{position:absolute;top:50%;left:50%}#circular .center .icon{position:absolute;width:200px;height:200px;top:-100px;left:-100px;background-image:url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13184551/200x200-tv-rm-tiny.png")}#circular .i1{top:calc( 50% - 0.924 * var(--r));left:calc( 50% + 0.382 * var(--r))}#circular .i1 .icon{background-image:url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13182811/200x200-es6-logo-1rm.png")}#circular .i2{top:calc( 50% - 0.555 * var(--r));left:calc( 50% + 0.831 * var(--r))}#circular .i2 .icon{background-image:url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183437/100x100-react-rm.png")}#circular .i3{top:calc( 50%);left:calc( 50% + var(--r))}#circular .i3 .icon{background-image:url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183718/100x100-webpack-logo-rm.png")}#circular .i4{top:calc( 50% + 0.555 * var(--r));left:calc( 50% + 0.831 * var(--r))}#circular .i4 .icon{background-image:url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183907/100x100-jest-logo-rm.png")}#circular .i5{top:calc( 50% + 0.924 * var(--r));left:calc( 50% + 0.382 * var(--r))}#circular .i5 .icon{background-image:url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13184118/100x100-ionic-logo-rm.png")}}@media only screen and (max-width: 852px){section.our-stack-2-frontend .header{margin-bottom:0;padding:1em}#circular .el{clear:both;display:flex;margin:0 1em}#circular .icon{background-size:cover;width:100px;height:100px;flex-shrink:0}#circular .my-label{margin-left:1em}#circular .i1 .icon{background-image:url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13182811/200x200-es6-logo-1rm.png")}#circular .i2 .icon{background-image:url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183437/100x100-react-rm.png")}#circular .i3 .icon{background-image:url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183718/100x100-webpack-logo-rm.png")}#circular .i4 .icon{background-image:url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183907/100x100-jest-logo-rm.png")}#circular .i5 .icon{background-image:url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13184118/100x100-ionic-logo-rm.png")}#circular .center{display:none}}
+@media only screen and (min-width: 852px) {
+  section.our-stack-2-frontend .header {
+    margin-bottom: 5em; }
+  section.our-stack-2-frontend .sm {
+    color: #999;
+    font-size: 0.8em;
+    margin-top: -0.5em;
+    font-style: italic; }
+  #circular {
+    margin-bottom: 4em;
+    --r: 250px;
+    width: calc( var(--r) * 2);
+    height: calc( var(--r) * 2);
+    position: relative; }
+    #circular .el {
+      width: 10px;
+      height: 10px;
+      position: absolute; }
+    #circular .icon {
+      background-size: cover;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: -50px;
+      left: -50px; }
+    #circular .my-label {
+      position: absolute;
+      width: 500px;
+      height: 30px;
+      line-height: 30px;
+      top: -15px;
+      left: 50px;
+      padding-left: 10px; }
+    #circular .center {
+      position: absolute;
+      top: 50%;
+      left: 50%; }
+      #circular .center .icon {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: -100px;
+        left: -100px;
+        background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13184551/200x200-tv-rm-tiny.png"); }
+    #circular .i1 {
+      top: calc( 50% - 0.924 * var(--r));
+      left: calc( 50% + 0.382 * var(--r)); }
+      #circular .i1 .icon {
+        background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13182811/200x200-es6-logo-1rm.png"); }
+    #circular .i2 {
+      top: calc( 50% - 0.555 * var(--r));
+      left: calc( 50% + 0.831 * var(--r)); }
+      #circular .i2 .icon {
+        background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183437/100x100-react-rm.png"); }
+    #circular .i3 {
+      top: calc( 50%);
+      left: calc( 50% + var(--r)); }
+      #circular .i3 .icon {
+        background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183718/100x100-webpack-logo-rm.png"); }
+    #circular .i4 {
+      top: calc( 50% + 0.555 * var(--r));
+      left: calc( 50% + 0.831 * var(--r)); }
+      #circular .i4 .icon {
+        background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183907/100x100-jest-logo-rm.png"); }
+    #circular .i5 {
+      top: calc( 50% + 0.924 * var(--r));
+      left: calc( 50% + 0.382 * var(--r)); }
+      #circular .i5 .icon {
+        background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13184118/100x100-ionic-logo-rm.png"); } }
+
+@media only screen and (max-width: 852px) {
+  section.our-stack-2-frontend .header {
+    margin-bottom: 0;
+    padding: 1em; }
+  #circular .el {
+    clear: both;
+    display: flex;
+    margin: 0 1em; }
+  #circular .icon {
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0; }
+  #circular .my-label {
+    margin-left: 1em; }
+  #circular .i1 .icon {
+    background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13182811/200x200-es6-logo-1rm.png"); }
+  #circular .i2 .icon {
+    background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183437/100x100-react-rm.png"); }
+  #circular .i3 .icon {
+    background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183718/100x100-webpack-logo-rm.png"); }
+  #circular .i4 .icon {
+    background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183907/100x100-jest-logo-rm.png"); }
+  #circular .i5 .icon {
+    background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13184118/100x100-ionic-logo-rm.png"); }
+  #circular .center {
+    display: none; } }

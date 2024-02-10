@@ -1,1 +1,16 @@
-.spacer{background:#f9f9f9}body.issue-202302{background:#fff}article#a20230212feb23issue section .header,article#a2023q3issue section .header{text-align:center}article#a20230212feb23issue section .header .title,article#a2023q3issue section .header .title{font-family:'Lobster', cursive}article#a20230212feb23issue section.our-clients,article#a2023q3issue section.our-clients{border-top:1px solid #00a3cc}
+.spacer {
+  background: #f9f9f9; }
+
+body.issue-202302 {
+  background: #fff; }
+
+article#a20230212feb23issue section .header,
+article#a2023q3issue section .header {
+  text-align: center; }
+  article#a20230212feb23issue section .header .title,
+  article#a2023q3issue section .header .title {
+    font-family: 'Lobster', cursive; }
+
+article#a20230212feb23issue section.our-clients,
+article#a2023q3issue section.our-clients {
+  border-top: 1px solid #00a3cc; }

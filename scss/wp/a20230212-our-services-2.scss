@@ -704,7 +704,16 @@ section.hero {
 }
 
 section.contact-us-2-md {
-  background: linear-gradient( var(--wco-lod-text-color), var(--wco-dol-bg-color) );
+  background: linear-gradient(
+    // var(--wco-lod-text-color),
+    // var(--wco-dol-bg-color)
+
+    #dad4d8 0%,
+    white 3%,
+    // #efec53 75%,
+    white 75%,
+    #dad4d8 85%
+  );
   // background-color: linear-gradient(var(--wco-color4), var(--wco-dol-bg-color) 90% );
   // background-color: linear-gradient( white, black );
 
