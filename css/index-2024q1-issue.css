@@ -119,6 +119,7 @@ hr {
 #p1 {
   --wco-20230212-bg2:  url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/11/16193623/512x512-tree-w-f6ebda-bg-tiny.png');
   background: var(--wco-20230212-bg2) center center;
+  background-color: #f6ebda;
   background-size: 300px;
   background-repeat: no-repeat;
   background-attachment: fixed;
