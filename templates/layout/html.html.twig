@@ -29,9 +29,17 @@
     <js-placeholder token="{{ placeholder_token }}">
 
 
-    <!--Matomo-->
+    <!-- Matomo Analytics -->
     <script>
       var _paq = window._paq = window._paq || [];
+
+      var queryString = window.location.search;
+      var urlParams = new URLSearchParams(queryString);
+      var cid = urlParams.get('cid')
+      if (cid) {
+        _paq.push(['setUserId', cid]);
+      }
+
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
@@ -43,30 +51,7 @@
         g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
       })();
     </script>
-    <!--/Matomo-->
-
-    <!--Mautic-->
-    <script type="text/javascript">
-      /** This section is only needed once per page if manually copying **/
-      if (typeof MauticSDKLoaded == 'undefined') {
-          var MauticSDKLoaded = true;
-          var head            = document.getElementsByTagName('head')[0];
-          var script          = document.createElement('script');
-          script.type         = 'text/javascript';
-          script.src          = '//mautic.wasya.co/media/js/mautic-form.js?v09d272bb';
-          script.onload       = function() {
-              MauticSDK.onLoad();
-          };
-          head.appendChild(script);
-          var MauticDomain = '//mautic.wasya.co';
-          var MauticLang   = {
-              'submittingMessage': "Please wait..."
-          }
-      }else if (typeof MauticSDK != 'undefined') {
-          MauticSDK.onLoad();
-      }
-    </script>
-    <!--/Mautic-->
+    <!-- /Matomo Analytics -->
 
   </head>
   <body{{ attributes.addClass(body_classes) }}>
