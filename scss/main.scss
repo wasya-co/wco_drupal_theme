@@ -1,5 +1,6 @@
 
 @import "consulting-pricing.scss";
+@import "./Card.scss";
 
 hr {
   border: 1px solid green;
@@ -117,49 +118,6 @@ html,
   display: none;
 }
 
-
-.Card3dlike {
-  border: 1px solid black;
-  border-radius: 10px;
-
-  background: white;
-
-  position: relative;
-
-  margin-bottom: 1em;
-
-  padding: 4em calc(25% - 1.5em) 1em 1em;
-
-  width: 75%;
-  height: 40vh;
-  min-height: 400px;
-
-  display: flex;
-  flex-direction: column;
-
-  .img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: 1px solid black;
-    border-radius: 5px;
-
-    background: white;
-
-    width: 60%;
-    height: 40%;
-    // aspect-ratio: 3/2;
-
-    position: absolute;
-    top: 4em; // calc( 50% - 66px );
-    left: 75%;
-
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-}
 
 
 /* Fields */

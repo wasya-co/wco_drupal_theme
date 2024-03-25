@@ -1,0 +1,58 @@
+/* See also Card.scss in ish_drupal_theme */
+/* 2023 */
+.Card3dlike {
+  border: 1px solid black;
+  border-radius: 10px;
+  background: white;
+  position: relative;
+  margin-bottom: 1em;
+  padding: 4em calc(25% - 1.5em) 1em 1em;
+  width: 75%;
+  height: 40vh;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column; }
+  .Card3dlike .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: white;
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    top: 4em;
+    left: 75%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat; }
+
+/* 2024-03-25 */
+.card3dlike2 .CardThemed {
+  border: 1px solid black;
+  border-radius: 10px;
+  background: white;
+  position: relative;
+  margin-bottom: 1em;
+  padding: 4em calc(25% - 1.5em) 1em 1em;
+  width: 75%;
+  height: 40vh;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column; }
+  .card3dlike2 .CardThemed .imgW {
+    flex-grow: 1; }
+  .card3dlike2 .CardThemed .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    top: 4em;
+    right: -50px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat; }
