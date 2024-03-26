@@ -457,7 +457,7 @@ section.hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0), #ccc); }
 
 section.contact-us-2-md {
-  background: linear-gradient(#dad4d8 0%, white 3%, white 75%, #dad4d8 85%);
+  background: linear-gradient(var(--wco-dol-bg-color), white 3%, white 75%, var(--wco-dol-bg-color));
   display: flex;
   flex-direction: row-reverse;
   padding: 5em 0;

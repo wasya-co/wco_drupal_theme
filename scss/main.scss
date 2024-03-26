@@ -109,7 +109,7 @@ a:active {
 html,
 .layout-content {
   // background-color: #f6ebda;
-  background-color: #dad4d8;
+  background-color: var(--wco-dol-bg-color); // #dad4d8;
 }
 
 /* C */
@@ -153,6 +153,7 @@ body:not(.user-logged-in) {
   background-position: center center;
   background-size: fit;
   background-repeat: no-repeat;
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/03/26124919/1024x400-another-number-theory.jpg");
 }
 
 /* L */

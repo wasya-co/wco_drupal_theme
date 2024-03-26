@@ -1,6 +1,8 @@
 
 
-<div class='Hero' style="background-color: {{ node.field_background_color_hero[0].value }}; background-image: url('{{ node.field_image_hero | file_url }}');" ></div>
+<? /* https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/03/26124919/1024x400-another-number-theory.jpg */ %>
+
+<div class='Hero' style="background-color: {{ node.field_background_color_hero[0].value }}; background-image: url('{{ node.field_image_hero | file_url | default('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/03/26125716/1600x400-office.p3.jpg') }}');" ></div>
 
 <div class='maxwidth'>
 
