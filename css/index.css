@@ -1003,7 +1003,7 @@ article.a20230703-dev-php {
   display: flex;
   justify-content: center;
   padding-top: 100px;
-  background: linear-gradient(#102449 90%, #dad4d8 95%); }
+  background: linear-gradient(#102449 90%, var(--wco-dol-bg-color) 95%); }
   .a20231112-white-on-white-tree img {
     max-width: 100%; }
 
