@@ -1,0 +1,212 @@
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('ish_drupal_theme/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+<div class="a20240727">
+<section class="a-hero">
+<div class="row">
+<div class="col-sm-6">
+<div class="hero-envelope"></div>
+</div>
+<div class="col-sm-6 main-header">
+<h3 class="title">
+PiousboxCRM
+</h3>
+<h5 class="subtitle">
+Advanced Email Client
+</h5>
+</div>
+</div>
+</section>
+<section class="b-hero">
+<div class="container">
+<div class="row">
+<div class="col-1 col-sm-3"></div>
+<div class="col-10 col-sm-6">
+<br><br>
+<p class="font-carattere">Built from the ground up to allow you to spend less time reading email.</p>
+</div>
+</div>
+</div>
+</section>
+<div class="container">
+<section class="Features">
+<div class="header">
+<h3 class="title">Features</h3>
+</div>
+<div class="row">
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-6 col-md-4">
+<div class="Card">
+<div class="thumbW">
+<i class="fa fa-hand-stop-o"></i>
+</div>
+<h5 class="title">
+Filters &amp;
+<br>
+Autoresponders
+</h5>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="Card">
+<div class="thumbW">
+<i class="fa fa-book"></i>
+</div>
+<h5 class="title">
+Rich Templates
+</h5>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="Card">
+<div class="thumbW">
+<i class="fa fa-paper-plane-o"></i>
+</div>
+<h5 class="title">
+CRM &amp;
+<br>
+Marketing
+</h5>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="Card">
+<div class="thumbW">
+<i class="fa fa-exchange"></i>
+</div>
+<h5 class="title">
+Workflows
+</h5>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="Card">
+<div class="thumbW">
+<i class="fa fa-pie-chart"></i>
+</div>
+<h5 class="title">
+Analytics
+</h5>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="empty-slot">
+More &nbsp;
+<i class="fa fa-long-arrow-right"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="container hide">
+<section class="Features2">
+<div class="header">
+<h3 class="title">CRM Features</h3>
+</div>
+<div class="row">
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-6 col-md-4">
+<div class="Card">
+<div class="thumbW">
+<i class="fa fa-hand-stop-o"></i>
+</div>
+<h5 class="title">
+AI-powered
+</h5>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="Card">
+<div class="thumbW">
+<i class="fa fa-book"></i>
+</div>
+<h5 class="title">
+Send Campaigns
+</h5>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="Card">
+<div class="thumbW">
+<i class="fa fa-paper-plane-o"></i>
+</div>
+<h5 class="title">
+Monitor Actions
+</h5>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="Card">
+<div class="thumbW">
+<i class="fa fa-exchange"></i>
+</div>
+<h5 class="title">
+Transactional Granularity
+</h5>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="Card">
+<div class="thumbW">
+<i class="fa fa-pie-chart"></i>
+</div>
+<h5 class="title">
+Link Obfuscation
+</h5>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="Card">
+<div class="thumbW">
+<i class="fa fa-pie-chart"></i>
+</div>
+<h5 class="title">
+Monitor Actions
+</h5>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="Card">
+<div class="thumbW">
+<i class="fa fa-pie-chart"></i>
+</div>
+<h5 class="title">
+Feedback Forms
+</h5>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="Card">
+<div class="thumbW">
+<i class="fa fa-pie-chart"></i>
+</div>
+<h5 class="title">
+Send Auto-Reminders
+</h5>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+
+</article>

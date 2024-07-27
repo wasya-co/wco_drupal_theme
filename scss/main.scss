@@ -1,6 +1,7 @@
 
 @import "consulting-pricing.scss";
 @import "./Card.scss";
+@import "./a20240727-piousbox-crm.scss";
 
 hr {
   border: 1px solid green;
@@ -69,7 +70,7 @@ a:active {
   border-bottom: 2px solid orange;
 }
 .region-content {
-  padding-bottom: 2em;
+  // padding-bottom: 2em;
 }
 .region-footer {
 
