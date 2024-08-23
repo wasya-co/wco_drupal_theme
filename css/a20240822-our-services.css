@@ -1,0 +1,68 @@
+section.a20240822-our-services {
+  margin: 2em auto; }
+  section.a20240822-our-services h5 {
+    text-align: center; }
+  section.a20240822-our-services h4 {
+    font-family: cursive;
+    text-align: center; }
+  section.a20240822-our-services .buttonW {
+    display: flex;
+    justify-content: center; }
+  section.a20240822-our-services button.v202408 {
+    background-color: #36A9AE;
+    background-image: linear-gradient(#37ADB2, #329CA0);
+    border: 1px solid #2A8387;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-family: -apple-system,".SFNSDisplay-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    line-height: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 11px 15px 12px;
+    text-align: center;
+    transition: box-shadow .05s ease-in-out,opacity .05s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation; }
+    section.a20240822-our-services button.v202408:hover {
+      box-shadow: rgba(255, 255, 255, 0.3) 0 0 2px inset, rgba(0, 0, 0, 0.4) 0 1px 2px;
+      text-decoration: none;
+      transition-duration: .15s, .15s; }
+    section.a20240822-our-services button.v202408:active {
+      box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px inset, rgba(0, 0, 0, 0.4) 0 1px 1px; }
+    section.a20240822-our-services button.v202408:disabled {
+      cursor: not-allowed;
+      opacity: .6; }
+    section.a20240822-our-services button.v202408:disabled:active {
+      pointer-events: none; }
+    section.a20240822-our-services button.v202408:disabled:hover {
+      box-shadow: none; }
+  section.a20240822-our-services .Card.v202408 {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  section.a20240822-our-services .descr {
+    border: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  section.a20240822-our-services .header {
+    display: flex;
+    justify-content: center; }
+    section.a20240822-our-services .header .title {
+      border-bottom: 2px solid gray;
+      text-align: center;
+      display: flex;
+      padding: 0 3em;
+      margin: 1em 0; }
+  section.a20240822-our-services .row {
+    margin-bottom: 3em; }

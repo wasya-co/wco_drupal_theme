@@ -2,6 +2,16 @@
 @import "consulting-pricing.scss";
 @import "./Card.scss";
 @import "./a20240727-piousbox-crm.scss";
+@import "./btn.scss";
+@import "./a20240822-our-services.scss";
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+  --wco-202302-color1: #00a3cc;
+  --wco-202302-border1: 1px solid var(--wco-202302-color1);
+}
 
 hr {
   border: 1px solid green;
@@ -114,11 +124,24 @@ html,
 }
 
 /* C */
+
 /* captcha */
 .captcha__element > .reload-captcha-wrapper {
   display: none;
 }
+.center {
+  text-align: center;
+}
 
+/* F */
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+}
 
 
 /* Fields */
