@@ -1,0 +1,17 @@
+.a20240801-carousel-trees {
+  height: 512px; }
+  .a20240801-carousel-trees .carousel-control-prev-icon {
+    filter: invert(100%); }
+  .a20240801-carousel-trees .carousel-control-next-icon {
+    filter: invert(100%); }
+  .a20240801-carousel-trees .carousel-indicators {
+    filter: invert(100%); }
+  .a20240801-carousel-trees .carousel-inner {
+    height: 100%; }
+    .a20240801-carousel-trees .carousel-inner .carousel-item {
+      height: 100%; }
+      .a20240801-carousel-trees .carousel-inner .carousel-item .itemC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; }

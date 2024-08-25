@@ -1,0 +1,103 @@
+<section class="a20240822-our-services container">
+	<div class="header">
+		<h2 class="title">
+			Our Services
+		</h2>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="Card v202408 ror-js-dev">
+				<img alt="ror js dev" src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/08/22193409/300x300-motorcycle_2-rm-tiny.png">
+				<h5>Ruby on Rails + JavaScript</h5>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="descr">
+				<h4>
+					Full-stack
+					<br>
+					Web Development
+				</h4>
+				<div class="buttonW">
+					<button class="v202408">
+						Learn More
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="descr">
+				<h4>
+					UIUX, Frontend
+					<br>
+					Web Development
+				</h4>
+				<div class="buttonW">
+					<button class="v202408">
+						Learn More
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="Card v202408">
+				<img alt="atom" src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/08/22193732/200x200-atom-22-tiny.png">
+				<h5>React Js</h5>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="Card v202408">
+				<img alt="shield" src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/08/22194405/300x300-lady-ssl-rm-tiny.png">
+				<h5>
+					Security &amp;
+					<br>
+					Devops
+				</h5>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="descr">
+				<h4>
+					Securely Deploying
+					<br>
+					Large Applications
+				</h4>
+				<div class="buttonW">
+					<button class="v202408">
+						Learn More
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="descr">
+				<h4>
+					We're no Strangers to
+					<br>
+					Legacy Code
+				</h4>
+				<div class="buttonW">
+					<button class="v202408">
+						Learn More
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="Card v202408">
+				<img alt="wrench" src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/08/22195712/300x300-wrench-tiny.png">
+				<h5>
+					Maintenance of
+					<br>
+					existing code
+				</h5>
+			</div>
+		</div>
+	</div>
+</section>
