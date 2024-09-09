@@ -962,6 +962,10 @@ article.a20230703-dev-php {
     margin: 0 .2em 0.2em 0;
     padding: 10px; }
 
+/* headers */
+.header .title {
+  font-family: 'Archivo Black', sanf-serif; }
+
 .a20231211-consulting-pricing th a {
   color: white; }
 
