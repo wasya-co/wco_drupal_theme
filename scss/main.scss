@@ -175,6 +175,29 @@ body:not(.user-logged-in) {
 }
 
 /* H */
+.halfwidth-imageW {
+  display: flex;
+
+  background-position: center left;
+  min-height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 400px;
+}
+.halfwidth-textW {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.odd .halfwidth-textW {
+  text-align: right;
+  align-items: flex-end;
+}
+.even .halfwidth-textW {
+  text-align: left;
+  align-items: flex-start;
+}
+
 .Hero {
   height: 400px;
   background-position: center center;
