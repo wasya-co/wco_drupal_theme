@@ -38,14 +38,13 @@
     <!-- Matomo Analytics -->
     <script>
       var _paq = window._paq = window._paq || [];
-
+      // cid
       var queryString = window.location.search;
       var urlParams = new URLSearchParams(queryString);
       var cid = urlParams.get('cid')
       if (cid) {
         _paq.push(['setUserId', cid]);
       }
-
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
@@ -59,6 +58,16 @@
     </script>
     <!-- /Matomo Analytics -->
 
+    <!-- sharethis --><script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=665cfa9cfef97000199a5e23&product=inline-share-buttons&source=platform" async="async"></script>
+
+    <!--hljs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/php.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/ruby.min.js"></script>
+    <!--/hljs-->
+
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     {# Keyboard navigation/accessibility link to main content section in page.html.twig: #}
@@ -67,6 +76,7 @@
     {{ page }}
     {{ page_bottom }}
     <js-bottom-placeholder token="{{ placeholder_token }}">
+    <script>hljs.highlightAll();</script>
 
 
     {# <div id='CssPlaceholders'  >
