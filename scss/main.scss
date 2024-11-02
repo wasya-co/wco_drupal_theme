@@ -68,8 +68,9 @@ a {
 }
 a:hover {
   color: var(--global--color-primary-hover);
-  text-decoration: underline;
-  text-decoration-style: dotted;
+  background-color: var(--wco-dol-bg-color);
+  text-decoration: none; // underline;
+  // text-decoration-style: dotted;
 }
 a:focus {
   color: var(--global--color-secondary);
@@ -117,6 +118,19 @@ a:active {
   // background-color: #d0c0a7; /* a big darker */
   background-color: #908e8a; /* gray */
   background-color: #bab4ab; /* lighter gray */
+
+
+  p {
+    margin: 0;
+  }
+
+  .region-postfooter {
+    height: 3em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 // #block-wco-drupal-theme-content {

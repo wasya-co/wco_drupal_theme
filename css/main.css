@@ -423,8 +423,8 @@ a {
 
 a:hover {
   color: var(--global--color-primary-hover);
-  text-decoration: underline;
-  text-decoration-style: dotted; }
+  background-color: var(--wco-dol-bg-color);
+  text-decoration: none; }
 
 a:focus {
   color: var(--global--color-secondary); }
@@ -458,6 +458,13 @@ a:active {
   /* gray */
   background-color: #bab4ab;
   /* lighter gray */ }
+  .layout-postfooter p {
+    margin: 0; }
+  .layout-postfooter .region-postfooter {
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 html,
 .layout-content {

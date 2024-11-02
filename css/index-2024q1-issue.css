@@ -462,8 +462,8 @@ a {
 
 a:hover {
   color: var(--global--color-primary-hover);
-  text-decoration: underline;
-  text-decoration-style: dotted; }
+  background-color: var(--wco-dol-bg-color);
+  text-decoration: none; }
 
 a:focus {
   color: var(--global--color-secondary); }
@@ -500,6 +500,15 @@ a:active {
   /* gray */
   background-color: #bab4ab;
   /* lighter gray */ }
+
+.layout-postfooter p {
+  margin: 0; }
+
+.layout-postfooter .region-postfooter {
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 html,
 .layout-content {
@@ -710,16 +719,19 @@ h2.wco-border-bottom {
 :root {
   --global--admin-bar--height: 0px;
   --global--color-primary: #178f87;
-  /* lod, Light on Dark */
+  /*
+   * lod, Light on Dark
+  **/
   --wco-lod-text-color: #ddd;
   --wco-lod-link-color:  white;
   --wco-lod-bg-color: rgba(0,0,0, 0.5);
-  --wco-lod-bg-color-trash: rgba(97, 206, 208, 0.8);
   --wco-light-border: 1px dashed var(--wco-lod-link-color);
   --wco-light-bg-color: white;
   --wco-light-text-color: black;
   --wco-light-site-menu-link-color: black;
-  /* dol, Dark on Light */
+  /*
+   * dol, Dark on Light
+  **/
   --wco-dol-text-color: #333;
   --wco-dol-link-color: #178f87;
   --wco-dol-bg-color: #f6ebda;

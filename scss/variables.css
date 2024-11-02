@@ -3,18 +3,21 @@
   --global--admin-bar--height: 0px;
   --global--color-primary: #178f87;
 
-  /* lod, Light on Dark */
+  /*
+   * lod, Light on Dark
+  **/
   --wco-lod-text-color: #ddd;
   --wco-lod-link-color:  white;
   --wco-lod-bg-color: rgba(0,0,0, 0.5);
-  --wco-lod-bg-color-trash: rgba(97, 206, 208, 0.8);
 
   --wco-light-border: 1px dashed var(--wco-lod-link-color);
   --wco-light-bg-color: white;
   --wco-light-text-color: black;
   --wco-light-site-menu-link-color: black;
 
-  /* dol, Dark on Light */
+  /*
+   * dol, Dark on Light
+  **/
   --wco-dol-text-color: #333;
   --wco-dol-link-color: #178f87;
   --wco-dol-bg-color: #f6ebda;
