@@ -1443,6 +1443,12 @@ html,
 .center {
   text-align: center; }
 
+/* contractor task */
+@media (min-width: 768px) {
+  article.node--type-contractor-task {
+    max-width: 90vw;
+    margin: auto; } }
+
 /* F */
 .flex-col {
   display: flex;
