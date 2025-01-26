@@ -2,6 +2,14 @@
 {#
   Volunteers needed
 #}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+
 
 <h2 class='cursive wco-border-bottom'>
   Volunteers needed
@@ -12,3 +20,7 @@
 <p>
     <a href="/volunteer" tabindex="-1"><button class="button-91" role="button" tabindex="-1">Volunteer</button>&nbsp;</a>
 </p>
+
+  {% endblock %}
+</div>
+

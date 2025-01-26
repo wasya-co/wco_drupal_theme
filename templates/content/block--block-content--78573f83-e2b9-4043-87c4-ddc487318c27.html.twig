@@ -2,6 +2,14 @@
 {#
   Wasya Co now accepts Donations
 #}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+
 
 <h2 class='cursive wco-border-bottom'>
   Wasya Co now accepts Donations
@@ -12,3 +20,7 @@
 <p>
     <a href="https://www.paypal.com/donate/?hosted_button_id=CBDQ7CTTCBVJS" target="_blank"><button class="button-91">Donate via Paypal</button>&nbsp;</a>
 </p>
+
+  {% endblock %}
+</div>
+

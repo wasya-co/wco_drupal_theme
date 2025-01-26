@@ -1,13 +1,22 @@
 
 {# 202311 White on white tree #}
 
-<div class='a20231112W'>
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
 
+<div class='a20231112W'>
   <div class="a20231112-white-on-white-tree center">
     <img alt="A beautiful generated tree, white on white"
       {# src="https://ish-drupal-prod.s3.amazonaws.com/public/2023-11/512x512%2020231101%20tree%20tiny.png?VersionId=IhS.dwKt4q5BM9C8SG6hWhJmxaCDWfCa"  #}
       src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/02/512x465-5-rm-tiny.png"
       />
   </div>
+</div>
 
+  {% endblock %}
 </div>

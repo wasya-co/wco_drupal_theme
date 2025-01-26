@@ -1,4 +1,14 @@
-<div class="container">
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+
+
+    <div class="container">
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 box-shadow">
           <div class="card-header">
@@ -50,5 +60,8 @@
           </div>
         </div>
       </div>
-
     </div>
+
+  {% endblock %}
+</div>
+

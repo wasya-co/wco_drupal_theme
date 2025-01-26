@@ -1,4 +1,12 @@
 
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+
 
 <div class="a20240801-carousel-trees carousel slide" data-interval="5001" data-ride="carousel" id="a20240801carouselTrees">
 	<ol class="carousel-indicators">
@@ -68,3 +76,7 @@
 		<span class="sr-only">Next</span>
 	</a>
 </div>
+
+  {% endblock %}
+</div>
+

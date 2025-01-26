@@ -3,6 +3,14 @@
   2023-12-11
   From: https://ordinarycoders.com/blog/article/bootstrap-pricing-table-example
 #}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+
 
 <div class="a20231211-consulting-pricing fullwidth">
   <div class="container pricing">
@@ -116,3 +124,7 @@
     </div>
   </div>
 </div>
+
+  {% endblock %}
+</div>
+
