@@ -4,7 +4,6 @@
 
 <div id="rotatingC" class="r2" style="width: 300px;
   height: 300px;
-  border: 1px solid red;
   text-align: center; " >
     <span class="label">Loading...</span>
 </div>
@@ -41,7 +40,7 @@
      * far — Camera frustum far plane.
     **/
     camera = new THREE.PerspectiveCamera( 90, w/h, 1, 1600 )
-    camera.position.set( -1.8, 100.6, 2.7 )
+    camera.position.set( -1.8, 2.6, 2.7 )
     loader.load( "{{ items }}", function ( gltf ) {
       $("#rotatingC span.label").css('display', 'none')
       document.getElementById('rotatingC').appendChild( container )
