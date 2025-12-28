@@ -1,0 +1,93 @@
+
+<h1 class='center text-center'>{{ label }}</h1>
+
+
+<div id="rotatingC" class="r2" style="width: 300px;
+  height: 300px;
+  border: 1px solid red;
+  text-align: center; " >
+    <span class="label">Loading...</span>
+</div>
+
+<script type="module">
+
+  import * as THREE from 'three';
+
+  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+  import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+  const w = 300;
+  const h = 300;
+
+  let camera, controls, scene, renderer;
+
+  init();
+  // render();
+  animate();
+
+  function init() {
+
+    const container = document.createElement( 'div' )
+    const loader = new GLTFLoader().setPath( '/themes/wco_drupal_theme/vendor/threejs/models/' )
+    scene = new THREE.Scene({})
+
+
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
+
+    /* fov — Camera frustum vertical field of view.
+     * aspect — Camera frustum aspect ratio.
+     * near — Camera frustum near plane.
+     * far — Camera frustum far plane.
+    **/
+    camera = new THREE.PerspectiveCamera( 90, w/h, 1, 1600 )
+    camera.position.set( -1.8, 100.6, 2.7 )
+    loader.load( "{{ items }}", function ( gltf ) {
+      $("#rotatingC span.label").css('display', 'none')
+      document.getElementById('rotatingC').appendChild( container )
+      scene.add( gltf.scene )
+      render()
+    } );
+
+
+    renderer = new THREE.WebGLRenderer({
+      alpha: true,
+      antialias: true,
+    });
+    // renderer.setClearColor( 0x000000, 0 ); // default
+    renderer.setPixelRatio( window.devicePixelRatio );
+    renderer.setSize( w, h );
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1;
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    container.appendChild( renderer.domElement );
+
+    controls = new OrbitControls( camera, renderer.domElement );
+    // controls.addEventListener( 'change', render ); // use if there is no animation loop
+    controls.minDistance = 400;
+    controls.maxDistance = 800;
+    controls.target.set( 0, 0, - 0.2 );
+    controls.autoRotate = true;
+    controls.update();
+
+    window.addEventListener( 'resize', onWindowResize );
+  }
+
+  function onWindowResize() {
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize( w, h );
+    render();
+  }
+
+  function render() {
+    renderer.render( scene, camera );
+  }
+  function animate() {
+    requestAnimationFrame( animate );
+    controls.update();
+    renderer.render( scene, camera );
+  }
+
+</script>
+
