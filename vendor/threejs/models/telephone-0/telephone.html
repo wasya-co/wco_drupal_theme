@@ -82,24 +82,25 @@
      * far — Camera frustum far plane.
     **/
     camera = new THREE.PerspectiveCamera( 2, w/h, 1, 1500 )
-    camera.position.set( -1.8, 2.6, 2.7 )
+    // camera.position.set( -1.8, 2.6, 2.7 )
+    camera.position.set( 5.551, 4.193, -7.819 )
 
     // camera = object_loader.parse(camera_data);
 
-    gltf_loader.load( model_path, function ( gltf ) {
-      document.querySelectorAll('#rotatingC span.label').forEach(el => el.style.display = 'none');
-      document.getElementById('rotatingC').appendChild( container )
-      scene.add( gltf.scene )
-      render()
-    } );
-
-    // object_loader.load('telephone.glb.json', (obj) => {
-    //   console.log('obj:', obj)
+    // gltf_loader.load( model_path, function ( gltf ) {
     //   document.querySelectorAll('#rotatingC span.label').forEach(el => el.style.display = 'none');
     //   document.getElementById('rotatingC').appendChild( container )
-    //   scene.add(obj);
+    //   scene.add( gltf.scene )
     //   render()
-    // });
+    // } );
+
+    object_loader.load('telephone.glb.json', (obj) => {
+      console.log('obj:', obj)
+      document.querySelectorAll('#rotatingC span.label').forEach(el => el.style.display = 'none');
+      document.getElementById('rotatingC').appendChild( container )
+      scene.add(obj);
+      render()
+    });
 
 
     renderer = new THREE.WebGLRenderer({
