@@ -1,8 +1,13 @@
-
 {#
    2026-01-03 _vp_ 3d phone glb
 #}
-
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
@@ -11,15 +16,16 @@
   {{ title_suffix }}
   {% block content %}
 
-    <div class="block block-block-content">
-      <section class="contact-us-2-md">
-        <div class="maxwidth">
-          {{ content.body }}
 
-          {{ content.field_model_path }}
-        </div>
-      </section>
-    </div>
+<section class="contact-us-2-md">
+  <div class="maxwidth">
+    {{ content.body }}
+
+    {{ content.field_model_path }}
+  </div>
+</section>
+
 
   {% endblock %}
 </div>
+
