@@ -30,3 +30,17 @@
     padding: 10px;
   }
 }
+
+
+.a20260105-rotating-tree {
+  display: flex;
+  justify-content: center;
+
+  background: linear-gradient( #102449 70%, var(--wco-dol-bg-color) 75% );
+  padding-top: 100px;
+
+  img {
+    max-width: 100%;
+  }
+
+}

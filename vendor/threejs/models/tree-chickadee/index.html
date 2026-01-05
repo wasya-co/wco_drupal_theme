@@ -1,32 +1,28 @@
+<html>
+<head>
 
-{# 202311 White on white tree #}
+  <!-- Import maps polyfill -->
+  <!-- Remove this when import maps will be widely supported -->
+  <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
 
-<div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "/themes/ish_drupal_theme/vendor/js/threejs/three.module.js",
+        "three/addons/": "/themes/ish_drupal_theme/vendor/js/threejs/jsm/"
+      }
+    }
+  </script>
 
-<div class='a20231112W hide'>
-  <div class="a20231112-white-on-white-tree center">
-    <img alt="A beautiful generated tree, white on white"
-      src="https://ish-drupal-prod.s3.amazonaws.com/public/2023-11/512x512%2020231101%20tree%20tiny.png?VersionId=IhS.dwKt4q5BM9C8SG6hWhJmxaCDWfCa"
-      {# src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/02/512x465-5-rm-tiny.png" #}
-      />
-  </div>
-</div>
+</head>
+<body>
 
-<div class='a20231112W'>
-  <div class="a20260105-rotating-tree center">
-    <div id="rotatingC" class="r2" style="width: 500px; max-width: 100%;
-      height: 500px; max-height: 70%;
-      text-align: center;
-      margin: auto; " >
-        <span class="label">Loading...</span>
-    </div>
-  </div>
+<div id="rotatingC" class="r2" style="width: 800px;
+  height: 600px;
+  border: 1px solid red;
+  text-align: center;
+  margin: auto; " >
+    <span class="label">Loading...</span>
 </div>
 
 <script type="module">
@@ -40,7 +36,7 @@
   const el = document.querySelector('#rotatingC');
   const { width, height } = el.getBoundingClientRect();
 
-  const model_path = 'bonsai-2/model.glb';
+  const model_path = 'tree-chickadee/chickadee_tree.glb';
   const camera_data = {
 	"metadata": {
 		"version": 4.7,
@@ -86,9 +82,9 @@
      * near — Camera frustum near plane.
      * far — Camera frustum far plane.
     **/
-    camera = new THREE.PerspectiveCamera( 3, width/height, 1, 1500 )
+    camera = new THREE.PerspectiveCamera( 0.1, width/height, 1, 1500 )
     // camera.position.set( -1.8, 2.6, 2.7 )
-    camera.position.set( 5, 9, 0 )
+    camera.position.set( 5.551, 4.193, -7.819 )
 
     // camera = object_loader.parse(camera_data);
 
@@ -124,7 +120,7 @@
     // controls.addEventListener( 'change', render ); // use if there is no animation loop
     controls.minDistance = 400;
     controls.maxDistance = 800;
-    controls.target.set( 0, 7, 0 );
+    controls.target.set( 0, 0, - 0.2 );
     controls.autoRotate = true;
     controls.update();
 
@@ -149,6 +145,5 @@
 
 </script>
 
-
-  {% endblock %}
-</div>
+</body>
+</html>
