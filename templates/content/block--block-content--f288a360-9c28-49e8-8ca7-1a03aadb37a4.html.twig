@@ -20,7 +20,7 @@
 
 <div class='a20231112W'>
   <div class="a20260105-rotating-tree center">
-    <div id="rotatingC" class="r2" style="width: 500px; max-width: 100%;
+    <div id="rotating_20260105" class="r2" style="width: 500px; max-width: 100%;
       height: 500px; max-height: 70%;
       text-align: center;
       margin: auto; " >
@@ -37,7 +37,7 @@
   import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
   const object_loader = new THREE.ObjectLoader();
 
-  const el = document.querySelector('#rotatingC');
+  const el = document.querySelector('#rotating_20260105');
   const { width, height } = el.getBoundingClientRect();
 
   const model_path = 'bonsai-2/model.glb';
@@ -93,19 +93,11 @@
     // camera = object_loader.parse(camera_data);
 
     gltf_loader.load( model_path, function ( gltf ) {
-      document.querySelectorAll('#rotatingC span.label').forEach(el => el.style.display = 'none');
-      document.getElementById('rotatingC').appendChild( container )
+      document.querySelectorAll('#rotating_20260105 span.label').forEach(el => el.style.display = 'none');
+      document.getElementById('#rotating_20260105').appendChild( container )
       scene.add( gltf.scene )
       render()
     } );
-
-    // object_loader.load('telephone.glb.json', (obj) => {
-    //   console.log('obj:', obj)
-    //   document.querySelectorAll('#rotatingC span.label').forEach(el => el.style.display = 'none');
-    //   document.getElementById('rotatingC').appendChild( container )
-    //   scene.add(obj);
-    //   render()
-    // });
 
 
     renderer = new THREE.WebGLRenderer({
