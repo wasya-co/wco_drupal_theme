@@ -94,7 +94,7 @@
 
     gltf_loader.load( model_path, function ( gltf ) {
       document.querySelectorAll('#rotating_20260105 span.label').forEach(el => el.style.display = 'none');
-      document.getElementById('#rotating_20260105').appendChild( container )
+      document.getElementById('rotating_20260105').appendChild( container )
       scene.add( gltf.scene )
       render()
     } );
