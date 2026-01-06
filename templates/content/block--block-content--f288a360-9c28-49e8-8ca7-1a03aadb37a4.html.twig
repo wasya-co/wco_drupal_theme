@@ -20,8 +20,8 @@
 
 <div class='a20231112W'>
   <div class="a20260105-rotating-tree center">
-    <div id="rotating_20260105" class="r2" style="width: 500px; max-width: 100%;
-      height: 500px; max-height: 70%;
+    <div id="rotating_20261205_bonsai_2" class="r2" style="width: 400px; max-width: 95%; height: 400px; max-height: 70%;
+      {# border: 1px solid red; #}
       text-align: center;
       margin: auto; " >
         <span class="label">Loading...</span>
@@ -37,7 +37,7 @@
   import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
   const object_loader = new THREE.ObjectLoader();
 
-  const el = document.querySelector('#rotating_20260105');
+  const el = document.querySelector('#rotating_20261205_bonsai_2');
   const { width, height } = el.getBoundingClientRect();
 
   const model_path = 'bonsai-2/model.glb';
@@ -65,7 +65,7 @@
 	}
 };
 
-  let camera, controls, scene, renderer;
+  let camera, controls, helper, scene, renderer;
 
   init();
   // render();
@@ -78,27 +78,45 @@
     scene = new THREE.Scene({})
 
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-    scene.add(ambientLight);
 
     /* fov — Camera frustum vertical field of view.
      * aspect — Camera frustum aspect ratio.
      * near — Camera frustum near plane.
      * far — Camera frustum far plane.
     **/
-    camera = new THREE.PerspectiveCamera( 3, width/height, 1, 1500 )
-    // camera.position.set( -1.8, 2.6, 2.7 )
-    camera.position.set( 5, 9, 0 )
-
+    camera = new THREE.PerspectiveCamera( 45, width/height, 1, 1500 )
+    camera.position.set( 20, 20, 0 )
+    scene.add(camera)
     // camera = object_loader.parse(camera_data);
 
+
+    // const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    // scene.add(ambientLight);
+
+    const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+    dirLight.position.set(100, 0, 100);
+    dirLight.target.position.set(0, 0, 0);
+    helper = new THREE.DirectionalLightHelper(dirLight, 5);
+    camera.add(dirLight);
+    camera.add(dirLight.target);
+    scene.add(helper);
+
+
     gltf_loader.load( model_path, function ( gltf ) {
-      document.querySelectorAll('#rotating_20260105 span.label').forEach(el => el.style.display = 'none');
-      document.getElementById('rotating_20260105').appendChild( container )
+      document.querySelectorAll('#rotating_20261205_bonsai_2 span.label').forEach(el => el.style.display = 'none');
+      document.getElementById('rotating_20261205_bonsai_2').appendChild( container )
+      gltf.scene.scale.set(15, 15, 15);
+
+      // const box = new THREE.Box3().setFromObject(gltf.scene);
+      // const center = new THREE.Vector3();
+      // box.getCenter(center);
+      // gltf.scene.position.sub(center);
+
+      gltf.scene.position.y -= 100;
+
       scene.add( gltf.scene )
       render()
     } );
-
 
     renderer = new THREE.WebGLRenderer({
       alpha: true,
@@ -116,7 +134,7 @@
     // controls.addEventListener( 'change', render ); // use if there is no animation loop
     controls.minDistance = 400;
     controls.maxDistance = 800;
-    controls.target.set( 0, 7, 0 );
+    controls.target.set( 0, 10, 0 );
     controls.autoRotate = true;
     controls.update();
 
@@ -140,6 +158,7 @@
   }
 
 </script>
+
 
 
   {% endblock %}

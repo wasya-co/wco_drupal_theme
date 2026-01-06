@@ -1,3 +1,6 @@
+<!--
+  * directional, static light
+-->
 <html>
 <head>
 
@@ -17,8 +20,8 @@
 </head>
 <body>
 
-<div id="rotatingC" class="r2" style="width: 800px;
-  height: 600px;
+<div id="rotating_20260105_chickadee" class="r2" style="width: 800px; height: 600px;
+  /* background: #cecece; */
   border: 1px solid red;
   text-align: center;
   margin: auto; " >
@@ -33,7 +36,8 @@
   import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
   const object_loader = new THREE.ObjectLoader();
 
-  const el = document.querySelector('#rotatingC');
+  const selectorId = 'rotating_20260105_chickadee';
+  const el = document.getElementById(selectorId)
   const { width, height } = el.getBoundingClientRect();
 
   const model_path = 'tree-chickadee/chickadee_tree.glb';
@@ -61,7 +65,7 @@
 	}
 };
 
-  let camera, controls, scene, renderer;
+  let camera, controls, scene, renderer, helper;
 
   init();
   // render();
@@ -74,14 +78,6 @@
     scene = new THREE.Scene({})
 
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-    scene.add(ambientLight);
-
-    // const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-    // directionalLight.position.set(5, 10, 7.5);
-    // scene.add(directionalLight);
-
-
     /* fov — Camera frustum vertical field of view.
      * aspect — Camera frustum aspect ratio.
      * near — Camera frustum near plane.
@@ -90,12 +86,37 @@
     camera = new THREE.PerspectiveCamera( 45, width/height, 1, 1500 )
     // camera.position.set( -1.8, 2.6, 2.7 )
     camera.position.set( 5.551, 4.193, -7.819 )
-
     // camera = object_loader.parse(camera_data);
+    scene.add(camera);
+
+    // const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
+    // scene.add(ambientLight);
+
+
+    // const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+    // dirLight.position.set(0, 200, 200);
+    // dirLight.target.position.set(0, 1, 0);
+    // helper = new THREE.DirectionalLightHelper(dirLight, 0.5);
+    // scene.add(dirLight);
+    // scene.add(helper);
+
+
+    const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+    dirLight.position.set(100000, 0, 100000);
+    dirLight.target.position.set(0, 0, 0);
+    helper = new THREE.DirectionalLightHelper(dirLight, 5);
+    camera.add(dirLight);
+    camera.add(dirLight.target);
+    scene.add(helper);
+
+    // const light = new THREE.PointLight(0xffffff, 1);
+    // camera.add(light);
+
+
 
     gltf_loader.load( model_path, function ( gltf ) {
-      document.querySelectorAll('#rotatingC span.label').forEach(el => el.style.display = 'none');
-      document.getElementById('rotatingC').appendChild( container )
+      document.querySelectorAll(`#${selectorId} span.label`).forEach(el => el.style.display = 'none');
+      document.getElementById(selectorId).appendChild( container )
       gltf.scene.scale.set(1500, 1500, 1500);
       scene.add( gltf.scene )
       render()
@@ -103,8 +124,8 @@
 
     // object_loader.load('telephone.glb.json', (obj) => {
     //   console.log('obj:', obj)
-    //   document.querySelectorAll('#rotatingC span.label').forEach(el => el.style.display = 'none');
-    //   document.getElementById('rotatingC').appendChild( container )
+    //   document.querySelectorAll(`#${selectorId} span.label`).forEach(el => el.style.display = 'none');
+    //   document.getElementById(selectorId).appendChild( container )
     //   scene.add(obj);
     //   render()
     // });
