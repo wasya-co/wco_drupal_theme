@@ -1,0 +1,27 @@
+
+import * as THREE from 'three';
+
+function fitCameraToObject(camera, object, controls, offset = 1.2) {
+  const box = new THREE.Box3().setFromObject(object);
+  const size = box.getSize(new THREE.Vector3());
+  const center = box.getCenter(new THREE.Vector3());
+
+  const maxDim = Math.max(size.x, size.y, size.z);
+  const fov = camera.fov * (Math.PI / 180);
+  let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2));
+  cameraZ *= offset;
+
+  camera.position.set(center.x, center.y, center.z + cameraZ);
+  camera.near = cameraZ / 100;
+  camera.far = cameraZ * 100;
+  camera.updateProjectionMatrix();
+
+  if (controls) {
+    controls.target.copy(center);
+    controls.update();
+  }
+}
+
+export {
+  fitCameraToObject,
+}
