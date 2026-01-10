@@ -1,0 +1,23 @@
+
+.rotating-ctrl-3 {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+.rotating-ctrl-3 .attribution {
+  font-size: 0.8em;
+  /* border: 1px solid yellow; */
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+
+  text-align: left;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5em;
+  color: #ccc;
+  padding: 0.5em;
+
+}
+.rotating-ctrl-3 .attribution :link {
+  color: #ccc;
+}

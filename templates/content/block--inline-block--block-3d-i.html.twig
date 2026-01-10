@@ -1,0 +1,168 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+
+    {# {{ content.field_dom_id.value |preg_replace('/<!--.*?-->/s','')|striptags|replace({"\n":"","\r":"","\t":""}) }} #}
+
+    <div id="{{ content.field_dom_id[0]['#context']['value'] }}" class="rotating-ctrl-3" style="width: {{ content.field_width[0]['#context']['value'] }} ; height: {{ content.field_height[0]['#context']['value'] }} ;
+      /* border: 1px solid red; */
+      text-align: center;
+      margin: auto; " >
+        <span class="label">Loading...</span>
+        <span class='attribution'>{{ content.field_attribution[0]|render }}</span>
+    </div>
+
+
+<script type="module">
+
+  const dom_id = '{{ content.field_dom_id[0]['#context']['value'] }}';
+  const model_name = '{{ content.field_model_name[0]['#context']['value'] }}'
+
+  import * as THREE from 'three';
+
+  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+  import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+  import { fitCameraToObject, logg } from 'ish/shared';
+
+  const object_loader = new THREE.ObjectLoader();
+
+  const el = document.getElementById(dom_id);
+  const { width, height } = el.getBoundingClientRect();
+
+  const model_path = `${model_name}/model.glb`;
+
+  let camera, controls, helper, scene, renderer;
+  let maxDim;
+
+  init();
+  animate();
+
+  function init() {
+
+    const container = document.createElement( 'div' )
+    const gltf_loader = new GLTFLoader().setPath( '/themes/wco_drupal_theme/vendor/threejs/models/' )
+    scene = new THREE.Scene({})
+
+    renderer = new THREE.WebGLRenderer({
+      alpha: true,
+      antialias: true,
+    });
+    // renderer.setClearColor( 0x000000, 0 ); // default
+    renderer.setPixelRatio( window.devicePixelRatio );
+    renderer.setSize( width, height );
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1;
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    container.appendChild( renderer.domElement );
+
+
+
+    /* fov — Camera frustum vertical field of view.
+     * aspect — Camera frustum aspect ratio.
+     * near — Camera frustum near plane.
+     * far — Camera frustum far plane.
+    **/
+    camera = new THREE.PerspectiveCamera( 45, width/height, 1, 1500 )
+    scene.add(camera)
+
+    controls = new OrbitControls( camera, renderer.domElement );
+    // controls.addEventListener( 'change', render ); // use if there is no animation loop
+
+
+    // const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    // scene.add(ambientLight);
+
+    const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+    dirLight.position.set(100, 0, 100);
+    dirLight.target.position.set(0, 0, 0);
+    helper = new THREE.DirectionalLightHelper(dirLight, 5);
+    camera.add(dirLight);
+    camera.add(dirLight.target);
+    scene.add(helper);
+
+
+    gltf_loader.load( model_path, function ( gltf ) {
+      document.querySelectorAll(`#${dom_id} span.label`).forEach(el => el.style.display = 'none');
+      document.getElementById(dom_id).appendChild( container )
+
+      scene.add( gltf.scene )
+
+      maxDim = fitCameraToObject(camera, gltf.scene, controls);
+      // logg(maxDim, 'maxDim')
+      controls.minDistance = maxDim;
+      controls.maxDistance = maxDim*3;
+      // controls.update();
+
+      render()
+    } );
+
+
+
+    controls.target.set( 0, 10, 0 );
+    controls.autoRotate = true;
+    controls.update();
+
+
+
+    window.addEventListener( 'resize', onWindowResize );
+  }
+
+  function onWindowResize() {
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize( width, height );
+    render();
+  }
+
+  function render() {
+    renderer.render( scene, camera );
+  }
+  function animate() {
+    requestAnimationFrame( animate );
+    controls.update();
+    renderer.render( scene, camera );
+  }
+</script>
+
+  {% endblock %}
+</div>
