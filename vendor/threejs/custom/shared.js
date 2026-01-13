@@ -23,7 +23,7 @@ const logg = (a, b="", c=null) => {
   console.log(`+++ ${b}:`, a); // eslint-disable-line no-console
 };
 
-function fitCameraToObject(camera, object, controls, offset = 1.2) {
+function fitCameraToObject_1(camera, object, controls, offset = 1.2) {
   const box = new THREE.Box3().setFromObject(object);
   const size = box.getSize(new THREE.Vector3());
   const center = box.getCenter(new THREE.Vector3());
@@ -44,6 +44,41 @@ function fitCameraToObject(camera, object, controls, offset = 1.2) {
   }
 
   return maxDim
+}
+
+function fitCameraToObject(camera, object, controls, offset = 1.2, heightFactor = 0.6) {
+  const box = new THREE.Box3().setFromObject(object);
+  const size = box.getSize(new THREE.Vector3());
+  const center = box.getCenter(new THREE.Vector3());
+
+  const maxDim = Math.max(size.x, size.y, size.z);
+  const fov = camera.fov * (Math.PI / 180);
+
+  let cameraDistance = Math.abs(maxDim / 2 / Math.tan(fov / 2));
+  cameraDistance *= offset;
+
+  // Raise camera upward and pull it back
+  const cameraHeight = maxDim * heightFactor;
+
+  camera.position.set(
+    center.x,
+    center.y + cameraHeight,
+    center.z + cameraDistance
+  );
+
+  // Make camera look down at the object
+  camera.lookAt(center);
+
+  camera.near = cameraDistance / 100;
+  camera.far = cameraDistance * 100;
+  camera.updateProjectionMatrix();
+
+  if (controls) {
+    controls.target.copy(center);
+    controls.update();
+  }
+
+  return maxDim;
 }
 
 export {
