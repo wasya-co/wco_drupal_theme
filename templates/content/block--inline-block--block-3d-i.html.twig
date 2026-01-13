@@ -48,7 +48,11 @@
       text-align: center;
       margin: auto; " >
         <span class="label">Loading...</span>
-        <span class='attribution'>{{ content.field_attribution[0]|render }}</span>
+
+        <span class='attribution'>
+          <img class='info-icon' alt='info' tabindex="0" width=24 src="/themes/wco_drupal_theme/images/ic_info_outline_48px.svg" />
+          <span class='tooltip' role="tooltip">{{ content.field_attribution[0]|render }}</span>
+        </span>
     </div>
 
 
@@ -71,7 +75,7 @@
 
   const model_path = `${model_name}/model.glb`;
 
-  let camera, controls, helper, scene, renderer;
+  let camera, container, controls, helper, scene, renderer;
   let maxDim;
 
   init();
@@ -79,7 +83,7 @@
 
   function init() {
 
-    const container = document.createElement( 'div' )
+    container = document.createElement( 'div' )
     const gltf_loader = new GLTFLoader().setPath( '/themes/wco_drupal_theme/vendor/threejs/models/' )
     scene = new THREE.Scene({})
 
@@ -144,15 +148,27 @@
 
 
 
-    window.addEventListener( 'resize', onWindowResize );
+    // window.addEventListener( 'resize', onWindowResize );
   }
 
-  function onWindowResize() {
+  /* function onWindowResize() {
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
     renderer.setSize( width, height );
     render();
-  }
+  } */
+
+  const resizeObserver = new ResizeObserver(entries => {
+    for (const entry of entries) {
+      const { width, height } = entry.contentRect;
+      logg(entry.contentRect, 'resizing...')
+
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    }
+  });
+  resizeObserver.observe(container);
 
   function render() {
     renderer.render( scene, camera );
