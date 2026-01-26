@@ -973,10 +973,6 @@ article.a20230703-dev-php {
   .a20260105-rotating-tree img {
     max-width: 100%; }
 
-/* headers */
-.header .title {
-  font-family: 'Archivo Black', sanf-serif; }
-
 .a20231211-consulting-pricing th a {
   color: white; }
 
@@ -1547,6 +1543,12 @@ body:not(.user-logged-in) .messages--error {
 .even .halfwidth-textW {
   text-align: left;
   align-items: flex-start; }
+
+/* headers */
+.header {
+  margin: 1em auto; }
+  .header .title {
+    font-family: 'Archivo Black', sanf-serif; }
 
 .Hero {
   height: 400px;

@@ -1,5 +1,4 @@
 
-@import "./headers.scss";
 @import "./consulting-pricing.scss";
 @import "./Card.scss";
 @import "./a20240727-piousbox-crm.scss";
@@ -220,6 +219,19 @@ body:not(.user-logged-in) {
   text-align: left;
   align-items: flex-start;
 }
+
+
+/* headers */
+
+.header {
+  margin: 1em auto;
+  .title {
+    font-family: 'Archivo Black', sanf-serif;
+  }
+
+}
+
+
 
 .Hero {
   height: 400px;

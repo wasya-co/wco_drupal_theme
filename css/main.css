@@ -1,9 +1,5 @@
-/* headers */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Carattere&display=swap");
-.header .title {
-  font-family: 'Archivo Black', sanf-serif; }
-
 .a20231211-consulting-pricing th a {
   color: white; }
 
@@ -574,6 +570,12 @@ body:not(.user-logged-in) .messages--error {
 .even .halfwidth-textW {
   text-align: left;
   align-items: flex-start; }
+
+/* headers */
+.header {
+  margin: 1em auto; }
+  .header .title {
+    font-family: 'Archivo Black', sanf-serif; }
 
 .Hero {
   height: 400px;

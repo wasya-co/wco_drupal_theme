@@ -722,6 +722,10 @@ h2.wco-border-bottom {
   margin-right: 0; }
 
 /* T */
+/* V */
+.container.row.view .header {
+  margin: 1em auto; }
+
 /* W */
 .a20231120-our-corporate-culture img {
   max-width: 100%; }
