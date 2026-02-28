@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap 4 + jQuery Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Bootstrap 4 + jQuery Demo</h1>
+
+    <div class="card p-4 shadow">
+        <p class="lead">Click the button to change this text.</p>
+        <button id="changeTextBtn" class="btn btn-primary">
+            Click Me
+        </button>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- Popper.js (required for Bootstrap 4 components like tooltips, dropdowns) -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Bootstrap 4 JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#changeTextBtn").click(function () {
+            $(".lead").text("Text changed using jQuery!");
+            $(this).removeClass("btn-primary")
+                   .addClass("btn-success")
+                   .text("Done");
+        });
+    });
+</script>
+
+</body>
+</html>

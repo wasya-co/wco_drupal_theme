@@ -1,6 +1,11 @@
-
-<!-- /products/iron-warbler -->
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap 4 + jQuery Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
 <style>
 
 .a20260228 section {
@@ -12,12 +17,8 @@
   flex-direction: column;
   justify-content: center;
 }
-.a20260228 img {
-
-}
 .a20260228 img.lg {
-
-  max-width: 80%;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -55,20 +56,21 @@
 
 
 </style>
-
+<body>
 
 <div class='container a20260228'>
 
-  <section class='intro' ><!-- zero -->
-    <div class='header'>
-      <h2 class='title text-center'>Irowor: A Trading Platform</h2>
+  <section class='integration-schwab' ><!-- one -->
+    <div class='integration-with'>
+      <p class='pr-2'>Integration with</p>
+      <img class='schwab-logo' src='https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2026/02/28140816/charles-schwab.jpg' alt='charles schwab logo' />
     </div>
     <div class='row'>
       <div class='col-md-8 offset-md-2'>
-        <p class='m-3'>Irowor is an opinionated trading platform. It offers a hands-off approach to options trading, earning passive income without committing significant time.</p>
+        <p class='m-3'>Irowor uses Schwab for its backend. The trades are placed, and market data is obtained, via the Schwab API. <button class='btn btn-secondary'>learn more</button></p>
+
       </div>
     </div>
-    <img class='gameui-1 lg' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2026/02/28154657/irowor-1.500x500.tiny_.png" alt='irowor logo' />
   </section>
   <hr />
 
@@ -82,8 +84,8 @@
       </div>
     </div>
     <div class='row mb-3'>
-      <div class='col-md-4'>
-      <div class='card p-4 shadow mb-2'>
+      <div class='col-4'>
+      <div class='card p-4 shadow'>
         <h5 class='text-center p-3'>Long Spread</h5>
         <img class='thumb pb-3' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2026/02/28135045/long-spread.jpg" alt='long-spread' />
         <button class="btn btn-secondary">
@@ -91,8 +93,8 @@
         </button>
       </div>
       </div>
-      <div class='col-md-4'>
-      <div class='card p-4 shadow mb-2'>
+      <div class='col-4'>
+      <div class='card p-4 shadow'>
         <h5 class='text-center p-3'>Short Spread</h5>
         <img class='thumb pb-3' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2026/02/28135046/short-spread.jpg" alt='short-spread' />
         <button class="btn btn-secondary">
@@ -100,8 +102,8 @@
         </button>
       </div>
       </div>
-      <div class='col-md-4'>
-      <div class='card p-4 shadow mb-2'>
+      <div class='col-4'>
+      <div class='card p-4 shadow'>
         <h5 class='text-center p-3'>Covered Call</h5>
         <img class='thumb pb-3' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2026/02/28135044/covered-call.jpg" alt='covered call' />
         <button class="btn btn-secondary">
@@ -149,20 +151,6 @@
   </section>
   <hr />
 
-  <section class='integration-schwab' ><!-- one -->
-    <div class='integration-with'>
-      <p class='pr-2'>Integration with</p>
-      <img class='schwab-logo' src='https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2026/02/28140816/charles-schwab.jpg' alt='charles schwab logo' />
-    </div>
-    <div class='row'>
-      <div class='col-md-8 offset-md-2'>
-        <p class='m-3'>Irowor uses Schwab for its backend. The trades are placed, and market data is obtained, via the Schwab API. <button class='btn btn-secondary'>learn more</button></p>
-
-      </div>
-    </div>
-  </section>
-  <hr />
-
   <section><!-- five -->
     <div class='header'>
       <h2 class='title text-center'>Open Source & Under Active Development</h2>
@@ -188,8 +176,7 @@
         <p class='m-3'>The platform teaches. See our <a href="https://wasyaco.com/tags/trading?utm_campaign=irowor">learning articles</a> and <a href="https://wasyaco.com/books/options-trading/?utm_campaign=irowor">mini-courses</a>.</p>
       </div>
     </div>
-    <!-- <img class='gameui-1 lg' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2026/02/28150848/learning-links-2.jpg" alt='irowor learning links' /> -->
-    <img class='gameui-1 lg' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2026/02/28154344/financial-news.400x400.tiny_.png" alt='irowor learning links' />
+    <img class='gameui-1 lg' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2026/02/28150848/learning-links-2.jpg" alt='irowor learning links' />
   </section>
   <hr />
 
@@ -202,8 +189,32 @@
         <p class='m-3'>Investors wanted! The platform was born to fulfill the needs of active traders. But we need your help to scale! <a href="https://wasyaco.com/pages/investing/?utm_campaign=irowor">Invest with us today</a>.</p>
       </div>
     </div>
-    <img class='gameui-1 lg' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2026/02/28153713/investor-1.400x400.tiny_.png" alt='irowor wasya co investing' />
+    <img class='gameui-1 lg' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2026/02/28151922/investor-1.400x400.jpg" alt='irowor wasya co investing' />
+
   </section>
+  <hr />
 
 </div>
 
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- Popper.js (required for Bootstrap 4 components like tooltips, dropdowns) -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Bootstrap 4 JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function () {
+
+  $("#changeTextBtn").click(function () {
+    $(".lead").text("Text changed using jQuery!");
+    $(this).removeClass("btn-primary")
+      .addClass("btn-success")
+      .text("Done");
+  });
+
+})
+</script>
+
+</body>
+</html>
