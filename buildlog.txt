@@ -1,0 +1,3 @@
+
+2026-04-21
+  removing vote up down. The last backup day that has it is 2026-04-20.
