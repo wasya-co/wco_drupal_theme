@@ -3,4 +3,5 @@
          2023-11-01 -  pro13 (local) is main
 0.0.1 -  2023-11-12 -  issue 2024q1, let's go
 0.0.2 :: 2026-01-05 :: continue incorporating threejs
+1.0.0 :: 2026-04-22 :: bootstrap 5
 
