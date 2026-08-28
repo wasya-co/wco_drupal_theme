@@ -1,5 +1,12 @@
-node_modules
+
+*bk
 
 .DS_Store
+
+node_modules
+
+yarn-error.log
+
 *trash
+
 

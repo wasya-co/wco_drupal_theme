@@ -1,7 +1,7 @@
 {
   "name": "wco_drupal_theme",
-  "version": "0.0.0",
-  "description": "",
+  "version": "2.0.1",
+  "description": "wco_drupal_theme",
   "main": "main.js",
   "repository": {
     "type": "git",
@@ -9,6 +9,10 @@
   },
   "author": "Victor Pudeyev <victor@wasya.co>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wasya-co/wco_drupal_theme/issues"
+  },
+  "homepage": "https://github.com/wasya-co/wco_drupal_theme",
   "dependencies": {
     "node-sass": "^9.0.0"
   },
