@@ -4,4 +4,4 @@
 0.0.1 -  2023-11-12 -  issue 2024q1, let's go
 0.0.2 :: 2026-01-05 :: continue incorporating threejs
 1.0.0 :: 2026-04-22 :: bootstrap 5
-
+2.0.0 :: 2026-08-25 :: make regions like in barrio
